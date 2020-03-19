@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" SizeToContent="Manual">
 
+    <Grid Background="#FFEEF9E8">
+
+
+        <Image HorizontalAlignment="Left" Height="382" Margin="420,0,0,0" VerticalAlignment="Center" Width="524" Source="cooking.jpg"/>
+        <Label Content="Log In" HorizontalAlignment="Left" Height="72" Margin="336,-10,0,0" VerticalAlignment="Top" Width="168" FontSize="48" Background="{x:Null}" Foreground="Black" FontFamily="Roboto" FontWeight="Bold"/>
+
+        <Grid HorizontalAlignment="Left" Height="360" Margin="92,49,0,0" VerticalAlignment="Top" Width="372">
+
+            <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" />
+            <TextBox HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="49" >
+                <TextBox.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFF9D200"/>
+                        <GradientStop Color="#FF13FF08" Offset="1"/>
+                    </RadialGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="268" Height="56">
+                <TextBox.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFFFD100"/>
+                        <GradientStop Color="#FF13FF08" Offset="1"/>
+                    </RadialGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Button Content="Pas encore de compte ?" Click="notyet" HorizontalAlignment="Center" Height="19" Margin="0,309,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Segoe UI Black" Foreground="Black" Visibility="Visible" Opacity="0.5" />
+            <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="46,43,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
+            <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="46,129,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
+
+        </Grid>
     </Grid>
+
 </Window>

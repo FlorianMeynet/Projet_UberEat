@@ -24,5 +24,24 @@ namespace projet_bdd
         {
             InitializeComponent();
         }
+
+        private void conexion(object sender, RoutedEventArgs e)
+        {
+            //if (correct)
+
+            Acceuil page = new Acceuil();
+            page.Show();
+            this.Close();
+
+        }
+
+        private void notyet(object sender, RoutedEventArgs e)
+        {
+            New_compte page = new New_compte();
+            page.Show();
+            this.Close();
+        }
+
+
     }
 }
