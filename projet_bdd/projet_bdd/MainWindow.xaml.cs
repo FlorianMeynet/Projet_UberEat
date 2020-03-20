@@ -42,6 +42,9 @@ namespace projet_bdd
             this.Close();
         }
 
-
+        private void leave(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

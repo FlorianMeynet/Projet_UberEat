@@ -15,8 +15,8 @@
 
         <Grid HorizontalAlignment="Left" Height="360" Margin="92,49,0,0" VerticalAlignment="Top" Width="372">
 
-            <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" />
-            <TextBox HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="49" >
+            <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5" />
+            <TextBox HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="49" BorderBrush="{x:Null}" >
                 <TextBox.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFF9D200"/>
@@ -24,7 +24,7 @@
                     </RadialGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="268" Height="56">
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="268" Height="56" BorderBrush="{x:Null}">
                 <TextBox.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFFFD100"/>
@@ -32,11 +32,12 @@
                     </RadialGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <Button Content="Pas encore de compte ?" Click="notyet" HorizontalAlignment="Center" Height="19" Margin="0,309,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Segoe UI Black" Foreground="Black" Visibility="Visible" Opacity="0.5" />
+            <Button Content="Pas encore de compte ?" Click="notyet" HorizontalAlignment="Center" Height="19" Margin="0,309,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Segoe UI Black" Foreground="Black" Visibility="Visible" Opacity="0.5" BorderBrush="{x:Null}" />
             <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="46,43,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
             <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="46,129,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
 
         </Grid>
+        <Button Content="Quitter" Click="leave" HorizontalAlignment="Left" Height="28                 " Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
     </Grid>
 
 </Window>

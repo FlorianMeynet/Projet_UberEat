@@ -13,18 +13,18 @@ using System.Windows.Shapes;
 namespace projet_bdd
 {
     /// <summary>
-    /// Logique d'interaction pour Commande.xaml
+    /// Logique d'interaction pour Creation_ok.xaml
     /// </summary>
-    public partial class Commande : Window
+    public partial class Creation_ok : Window
     {
-        public Commande()
+        public Creation_ok()
         {
             InitializeComponent();
         }
 
-        private void retour(object sender, RoutedEventArgs e)
+        private void ok(object sender, RoutedEventArgs e)
         {
-            Acceuil a = new Acceuil();
+            MainWindow a = new MainWindow();
             a.Show();
             this.Close();
         }

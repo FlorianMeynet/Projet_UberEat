@@ -8,9 +8,10 @@
         Title="Acceuil" Height="450" Width="800">
     <Grid Background="#FFEEF9E8">
         <Label Content="Que voulez vous faire ?" HorizontalAlignment="Left" Height="89" Margin="129,10,0,0" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold"/>
-        <Button Content="Commander un plat" Click="commande" HorizontalAlignment="Left" Height="91" Margin="227,134,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" />
+        <Button Content="Commander un plat" Click="commande" HorizontalAlignment="Left" Height="91" Margin="227,134,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
 
-        <Button Content="Créer un plat" Click="commande" HorizontalAlignment="Left" Height="76" Margin="227,293,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" />
+        <Button Content="Créer un plat" Click="commande" HorizontalAlignment="Left" Height="76" Margin="227,293,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
+        <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28                 " Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
 
     </Grid>
 </Window>

@@ -10,7 +10,10 @@
     <Compile Update="Acceuil.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="commande.xaml.cs">
+    <Compile Update="Commande.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Creation_ok.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="New_compte.xaml.cs">
@@ -21,7 +24,10 @@
     <Page Update="Acceuil.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="commande.xaml">
+    <Page Update="Commande.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Creation_ok.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

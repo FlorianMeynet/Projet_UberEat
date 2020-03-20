@@ -24,7 +24,18 @@ namespace projet_bdd
 
         private void creation(object sender, RoutedEventArgs e)
         {
+            //if(tous est validé)
+            Creation_ok a = new Creation_ok();
+            a.Show();
+            this.Close();
 
+        }
+
+        private void retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.Show();
+            this.Close();
         }
     }
 }
