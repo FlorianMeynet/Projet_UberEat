@@ -28,5 +28,12 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
+
+        private void deco_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.Show();
+            this.Close();
+        }
     }
 }
