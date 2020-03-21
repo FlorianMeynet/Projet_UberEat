@@ -27,11 +27,18 @@ namespace projet_bdd
 
         private void conexion(object sender, RoutedEventArgs e)
         {
-            //if (correct)
+            if ((pseudo.Text=="" )|| (mdp.Text==""))
+            {
+                erreur_connexion a = new erreur_connexion();
+                a.Show();
 
-            Acceuil page = new Acceuil();
-            page.Show();
-            this.Close();
+            }
+            else
+            {
+                Acceuil page = new Acceuil();
+                page.Show();
+                this.Close();
+            }
 
         }
 

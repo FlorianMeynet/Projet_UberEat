@@ -16,61 +16,19 @@
             </Grid.RowDefinitions>
 
             <Button Content="Créer" Click="creation" HorizontalAlignment="Left" Height="52" Margin="440,24,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" Grid.Row="1" />
-            <TextBox HorizontalAlignment="Left" Margin="49,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" >
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFF9D200"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,124,0,0">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
+            <TextBox HorizontalAlignment="Left" Margin="49,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Background="#FFCFC1C1" />
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,124,0,0" Background="#FFCFC1C1"/>
             <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="459,70,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
             <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="459,132,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,223,0,0" Grid.RowSpan="2">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,105,0,0">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,167,0,0">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,223,0,0" Grid.RowSpan="2" Background="#FFCFC1C1"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,105,0,0" Background="#FFCFC1C1"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,167,0,0" Background="#FFCFC1C1"/>
             <Label Content="Nom :" HorizontalAlignment="Left" Margin="49,40,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
             <Label Content="Prénom :" HorizontalAlignment="Left" Margin="49,94,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
             <Label Content="Adresse :" HorizontalAlignment="Left" Margin="49,196,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
             <CheckBox Content="Homme" HorizontalAlignment="Left" Margin="60,130,0,0" Grid.Row="1" VerticalAlignment="Top" />
             <CheckBox Content="Femme" HorizontalAlignment="Left" Margin="164,130,0,0" Grid.Row="1" VerticalAlignment="Top" />
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="49,0,0,120" Grid.Row="1">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="49,0,0,120" Grid.Row="1" Background="#FFCFC1C1"/>
             <Label Content="Pays :" HorizontalAlignment="Left" Margin="49,13,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
             <DatePicker HorizontalAlignment="Left" Margin="49,85,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="28" Width="174">
                 <DatePicker.RenderTransform>
@@ -83,14 +41,7 @@
             </DatePicker>
             <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="49,62,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
             <Label Content="Email :" HorizontalAlignment="Left" Margin="49,150,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,180,0,0">
-                <TextBox.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FFFFD100"/>
-                        <GradientStop Color="#FF13FF08" Offset="1"/>
-                    </RadialGradientBrush>
-                </TextBox.Background>
-            </TextBox>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,180,0,0" Background="#FFCFC1C1"/>
         </Grid>
         <Label Content="Création d'un compte :" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="42" Width="216" Foreground="Black" FontSize="20"/>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28                 " Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
