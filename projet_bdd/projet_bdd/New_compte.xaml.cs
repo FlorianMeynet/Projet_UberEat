@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace projet_bdd
 {
@@ -29,6 +30,50 @@ namespace projet_bdd
             a.Show();
             this.Close();
 
+        }
+
+        public void UpdateBdd(string adressedelabdd)
+        {
+            MySqlConnection maConnexion = null;
+            try
+            {
+                string connexionString = adressedelabdd;
+
+                maConnexion = new MySqlConnection(connexionString);
+                maConnexion.Open();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(" ErreurConnexion : " + e.ToString());
+                return;
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            string requete = "SELECT DISTINCT pseudo FROM personne "; //  On a dit sur le pseudo
+            MySqlCommand command1 = maConnexion.CreateCommand();
+            command1.CommandText = requete;
+            MySqlDataReader reader = command1.ExecuteReader();
+            command1.Dispose();
+            // if pseudo is in reader, on continue et on l'insert
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            string insertTable = "RequeteSQLpourinsererdanslatable";
+            MySqlCommand command3 = maConnexion.CreateCommand();
+            command3.CommandText = insertTable;
+            try
+            {
+                command3.ExecuteNonQuery();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(" ErreurConnexion : " + e.ToString());
+                Console.ReadLine();
+                return;
+            }
+
+            command3.Dispose();
         }
 
         private void retour(object sender, RoutedEventArgs e)
