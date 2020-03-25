@@ -3,6 +3,8 @@ USE `cooking`;
 CREATE TABLE `cooking`.`client` (
   `nom` VARCHAR(20) NOT NULL,
  " `prenom` VARCHAR(20) NULL,
+ `pseudo` VARCHAR(20) NULL,
+ `mdp` VARCHAR(20) NULL,
   `age` INT NULL,
   `permis` VARCHAR(10) NULL,
   `adresse` VARCHAR(50) NULL,

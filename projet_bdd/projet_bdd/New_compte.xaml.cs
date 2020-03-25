@@ -25,14 +25,42 @@ namespace projet_bdd
 
         private void creation(object sender, RoutedEventArgs e)
         {
-            //if(tous est validé)
+            MySqlConnection maConnexion = null;
+            try
+            {
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=cooking;UID=nom_login;PASSWORD=password_login;";
+
+                maConnexion = new MySqlConnection(connexionString);
+                maConnexion.Open();
+            }
+            catch (MySqlException er)
+            {
+                Console.WriteLine(" ErreurConnexion : " + er.ToString());
+                return;
+            }
+            string requete = "Select pseudo,email from client;";
+
+            MySqlCommand command1 = maConnexion.CreateCommand();
+            command1.CommandText = requete;
+
+            MySqlDataReader reader = command1.ExecuteReader();
+
+            string[] list_pseudo = new string[reader.FieldCount];
+            while (reader.Read())   
+            {   
+
+                if (new_pseudo.Text == reader.GetValue(0).ToString() ||( new_email.Text== reader.GetValue(1).ToString()))
+                {
+                   //Probleme existe deja
+                }
+            }
             Creation_ok a = new Creation_ok();
             a.Show();
             this.Close();
 
         }
-
-       public void UpdateBdd(string adressedelabdd)
+        //Il 
+       /*public void UpdateBdd(string adressedelabdd)
         {
             MySqlConnection maConnexion = null;
             try
@@ -74,7 +102,7 @@ namespace projet_bdd
             }
 
             command3.Dispose();
-        }
+        }*/
 
         private void retour(object sender, RoutedEventArgs e)
         {
