@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meyne\\OneDrive - De Vinci\\ESILV\\S2\\Bases de données et interopérabilité\\Projet\\code\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {}
+    "C:\\Users\\asus\\Desktop\\Projet github\\Pense a pull avant d'ouvrir\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meyne\\OneDrive - De Vinci\\ESILV\\S2\\Bases de données et interopérabilité\\Projet\\code\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {
+    "C:\\Users\\asus\\Desktop\\Projet github\\Pense a pull avant d'ouvrir\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meyne\\OneDrive - De Vinci\\ESILV\\S2\\Bases de données et interopérabilité\\Projet\\code\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\Projet github\\Pense a pull avant d'ouvrir\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
         "projectName": "projet_bdd",
-        "projectPath": "C:\\Users\\meyne\\OneDrive - De Vinci\\ESILV\\S2\\Bases de données et interopérabilité\\Projet\\code\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
-        "packagesPath": "C:\\Users\\meyne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meyne\\OneDrive - De Vinci\\ESILV\\S2\\Bases de données et interopérabilité\\Projet\\code\\Projet_UberEat\\projet_bdd\\projet_bdd\\obj\\",
+        "projectPath": "C:\\Users\\asus\\Desktop\\Projet github\\Pense a pull avant d'ouvrir\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\Projet github\\Pense a pull avant d'ouvrir\\projet_bdd\\projet_bdd\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\meyne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

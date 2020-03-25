@@ -44,6 +44,7 @@ namespace projet_bdd
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();
+            command1.Dispose();
 
             string[] list_pseudo = new string[reader.FieldCount];
             while (reader.Read())   
@@ -53,13 +54,17 @@ namespace projet_bdd
                 {
                    //Probleme existe deja
                 }
+                else
+                {
+                    //Création du nouvelle individu dans la table
+                }
             }
             Creation_ok a = new Creation_ok();
             a.Show();
             this.Close();
 
         }
-        //Il 
+
        /*public void UpdateBdd(string adressedelabdd)
         {
             MySqlConnection maConnexion = null;

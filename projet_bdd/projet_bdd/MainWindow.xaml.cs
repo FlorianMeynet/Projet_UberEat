@@ -45,13 +45,13 @@ namespace projet_bdd
             }
 
             string p = pseudo.Text;
-            string requete = "Select mdp from client where pseudo=="+p+";";
+            string requete = "SELECT mdp FROM client WHERE pseudo=="+p+";";
 
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
-
+            command1.Dispose();
             if ((pseudo.Text=="" )|| (mdp.Text=="") || (mdp.Text != reader.GetValue(0).ToString() ))  //Verification avec le mdp
             {
                 erreur_connexion a = new erreur_connexion();
@@ -59,9 +59,7 @@ namespace projet_bdd
             }
             else
             {
-                Acceuil page = new Acceuil();
-                page.Show();
-                this.Close();
+                notyet(sender, e);
             }
         }
 

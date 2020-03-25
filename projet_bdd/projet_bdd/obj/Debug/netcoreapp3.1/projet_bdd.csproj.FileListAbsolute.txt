@@ -61,3 +61,8 @@ C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\proje
 C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.pdb
 C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.genruntimeconfig.cache
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.ResolveComReference.cache
+C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\bin\Debug\netcoreapp3.1\Interop.SSCE.dll
+C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\Interop.SSCE.dll
+C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.ResolveComReference.cache
+C:\Users\asus\Desktop\Projet github\Pense a pull avant d'ouvrir\projet_bdd\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CopyComplete
