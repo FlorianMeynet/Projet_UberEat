@@ -6,4 +6,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <COMReference Include="SSCE.dll">
+      <Guid>ce4aacfa-3cfd-4028-b2d9-f272314f07c8</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+    </COMReference>
+  </ItemGroup>
+
 </Project>
