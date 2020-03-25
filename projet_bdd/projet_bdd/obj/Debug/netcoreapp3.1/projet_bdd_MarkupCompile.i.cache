@@ -12,15 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\projet_bdd\projet_bdd\App.xaml
 7352472604
 
-<<<<<<< HEAD
 10-1282648864
 1921654412462
 Acceuil.xaml;Commande.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;MainWindow.xaml;New_compte.xaml;
-=======
-10-1174783490
-193-1320804328
-Acceuil.xaml;commande.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;MainWindow.xaml;New_compte.xaml;
->>>>>>> e0e5bad694f369cf584558b704b27ca608759908
 
-False
+True
 

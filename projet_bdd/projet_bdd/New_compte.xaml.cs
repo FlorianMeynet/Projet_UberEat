@@ -32,7 +32,7 @@ namespace projet_bdd
 
         }
 
-        public void UpdateBdd(string adressedelabdd)
+       public void UpdateBdd(string adressedelabdd)
         {
             MySqlConnection maConnexion = null;
             try

@@ -12,12 +12,11 @@
             <Button Content="Commander un plat" Margin="0,50,0,0" Click="commande" Height="91"  VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
 
             <Button Content="Créer un plat" Click="commande" Height="76" Margin="50" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
-        
+            <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
+
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Bottom">
-            <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28"   Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
-            <!--> j'arrive pas a foutre ce putain de bouton en bas <!-->
-        </StackPanel>
+            
+        
     </StackPanel>
 </Window>
