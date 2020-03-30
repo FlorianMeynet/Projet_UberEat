@@ -32,6 +32,7 @@ namespace projet_bdd
             this.capitalCooks = 0;
             this.mdp = null;
         }
+         
         public Client(int i,string n, string p, string a, string v, DateTime? d,long t, string m, bool e,int c, string mdp)
         {
             this.idClient = i;
@@ -61,11 +62,13 @@ namespace projet_bdd
             get { return (this.prenom); }
             set { this.prenom = value; }
         }
+
         public string Adresse
         {
             get { return (this.adresse); }
             set { this.adresse = value; }
         }
+
         public string Ville
         {
             get { return (this.ville); }
@@ -76,26 +79,31 @@ namespace projet_bdd
             get { return (this.d_naissance); }
             set { this.d_naissance = value; }
         }
+
         public long Tel
         {
             get { return (this.tel); }
             set { this.tel = value; }
         }
+
         public string Mail
         {
             get { return (this.mail); }
             set { this.mail = value; }
         }
+
         public bool EstCreateur
         {
             get { return (this.estCreateur); }
             set { this.estCreateur = value; }
         }
+
         public int CapitalCooks
         {
             get { return (this.capitalCooks); }
             set { this.capitalCooks = value; }
         }
+
         public string Mdp
         {
             get { return (this.mdp); }

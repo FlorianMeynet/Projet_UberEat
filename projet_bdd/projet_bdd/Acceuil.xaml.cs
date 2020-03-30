@@ -28,7 +28,6 @@ namespace projet_bdd
             Commande a = new Commande();
             a.Show();
             this.Close();
-
         }
 
         private void retour(object sender, RoutedEventArgs e)

@@ -44,16 +44,35 @@ namespace projet_bdd
                 return;
             }
 
-            string p = mail.Text;
-            string requete = "SELECT motDePasse FROM client WHERE adresseEmail=="+p+";";
+            Client uti = new Client();
 
+            string p = mail.Text;
+            string requete = "SELECT * FROM client WHERE adresseEmail=="+p+";";
+            
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
             command1.Dispose();
-            if (mdp.Text == reader.GetValue(0).ToString())  //Verification avec le mdp
+            
+            if (mdp.Text == reader.GetValue(10).ToString())  //Verification avec le mdp
             {
+                uti.IdClient = int.Parse(reader.GetValue(0).ToString());
+                uti.Nom = reader.GetValue(1).ToString();
+                uti.Prenom = reader.GetValue(2).ToString();
+                uti.Adresse = reader.GetValue(3).ToString();
+                uti.Ville = reader.GetValue(4).ToString();
+                string date = reader.GetValue(5).ToString();
+                string[] date1 = new string[3];
+                date1 = date.Split('-');
+                DateTime date2 = new DateTime(int.Parse(date1[0]), int.Parse(date1[1]), int.Parse(date1[2]));
+                uti.D_naissance = date2;
+                uti.Tel = int.Parse(reader.GetValue(6).ToString());
+                uti.Mail = reader.GetValue(7).ToString();
+                uti.EstCreateur = bool.Parse(reader.GetValue(8).ToString());
+                uti.CapitalCooks = int.Parse(reader.GetValue(9).ToString());
+                uti.Mdp = reader.GetValue(10).ToString();
+
                 Acceuil page = new Acceuil();
                 page.Show();
                 this.Close();
