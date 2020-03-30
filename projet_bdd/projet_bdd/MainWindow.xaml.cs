@@ -33,7 +33,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=cooking;UID=nom_login;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -44,22 +44,25 @@ namespace projet_bdd
                 return;
             }
 
-            string p = pseudo.Text;
-            string requete = "SELECT mdp FROM client WHERE pseudo=="+p+";";
+            string p = mail.Text;
+            string requete = "SELECT motDePasse FROM client WHERE adresseEmail=="+p+";";
 
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
             command1.Dispose();
-            if ((pseudo.Text=="" )|| (mdp.Text=="") || (mdp.Text != reader.GetValue(0).ToString() ))  //Verification avec le mdp
+            if (mdp.Text == reader.GetValue(0).ToString())  //Verification avec le mdp
             {
-                erreur_connexion a = new erreur_connexion();
-                a.Show();
+                Acceuil page = new Acceuil();
+                page.Show();
+                this.Close();
             }
             else
             {
-                notyet(sender, e);
+                erreur_connexion a = new erreur_connexion();
+                a.Show();
+                
             }
         }
 
