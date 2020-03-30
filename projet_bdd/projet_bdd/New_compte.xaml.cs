@@ -28,7 +28,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=cooking;UID=nom_login;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -38,7 +38,8 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return;
             }
-            string requete = "Select pseudo,email from client;";
+
+            string requete = "Select email from client;";
 
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
@@ -62,53 +63,32 @@ namespace projet_bdd
             Creation_ok a = new Creation_ok();
             a.Show();
             this.Close();
-
-        }
-
-       /*public void UpdateBdd(string adressedelabdd)
-        {
-            MySqlConnection maConnexion = null;
-            try
-            {
-                string connexionString = adressedelabdd;
-
-                maConnexion = new MySqlConnection(connexionString);
-                maConnexion.Open();
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(" ErreurConnexion : " + e.ToString());
-                return;
-            }
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            string requete = "SELECT DISTINCT pseudo FROM personne "; //  On a dit sur le pseudo
-            MySqlCommand command1 = maConnexion.CreateCommand();
-            command1.CommandText = requete;
-            MySqlDataReader reader = command1.ExecuteReader();
-            command1.Dispose();
-            // if pseudo is in reader, on continue et on l'insert
+            string name = nom.Text;
+            string pre = prenom.Text;
+            string adr = adresse.Text;
+            string v = ville.Text;
+            DateTime? d = date.SelectedDate;
+            string p = new_pseudo.Text;
+            string m = mdp.Text;
 
 
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            string insertTable = "RequeteSQLpourinsererdanslatable";
+            string insertTable = " insert into Professeur  Values ();";   
             MySqlCommand command3 = maConnexion.CreateCommand();
             command3.CommandText = insertTable;
             try
             {
                 command3.ExecuteNonQuery();
             }
-            catch (MySqlException e)
+            catch (MySqlException er)
             {
-                Console.WriteLine(" ErreurConnexion : " + e.ToString());
+                Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 Console.ReadLine();
                 return;
             }
 
-            command3.Dispose();
-        }*/
+        }
 
+       
         private void retour(object sender, RoutedEventArgs e)
         {
             MainWindow a = new MainWindow();

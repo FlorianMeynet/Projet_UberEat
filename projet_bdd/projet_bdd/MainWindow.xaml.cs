@@ -77,11 +77,11 @@ namespace projet_bdd
                 page.Show();
                 this.Close();
             }
+
             else
             {
                 erreur_connexion a = new erreur_connexion();
                 a.Show();
-                
             }
         }
 
