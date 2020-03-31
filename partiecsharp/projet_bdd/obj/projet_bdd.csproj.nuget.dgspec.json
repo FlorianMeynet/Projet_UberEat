@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {}
+    "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\partiecsharp\\projet_bdd\\projet_bdd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj": {
+    "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\partiecsharp\\projet_bdd\\projet_bdd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\partiecsharp\\projet_bdd\\projet_bdd.csproj",
         "projectName": "projet_bdd",
-        "projectPath": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\projet_bdd\\projet_bdd\\projet_bdd.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\partiecsharp\\projet_bdd\\projet_bdd.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\projet_bdd\\projet_bdd\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\Projet github\\Projet_UberEat\\partiecsharp\\projet_bdd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
