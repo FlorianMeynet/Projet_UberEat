@@ -51,7 +51,7 @@ namespace projet_bdd
             while (reader.Read())   
             {   
 
-                if (new_pseudo.Text == reader.GetValue(0).ToString() ||( new_email.Text== reader.GetValue(1).ToString()))
+                if (new_pseudo.Text == reader.GetValue(0).ToString() ||( mail.Text== reader.GetValue(1).ToString()))
                 {
                    //Probleme existe deja
                 }
@@ -88,7 +88,6 @@ namespace projet_bdd
 
         }
 
-       
         private void retour(object sender, RoutedEventArgs e)
         {
             MainWindow a = new MainWindow();
