@@ -28,6 +28,9 @@
     <Compile Update="erreur_connexion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="erreur_mail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="New_compte.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="erreur_connexion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="erreur_mail.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

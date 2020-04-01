@@ -104,3 +104,5 @@ C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabili
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.AssemblyInfo.cs
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CopyComplete
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.genruntimeconfig.cache
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\Acceuil_commande.g.cs
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\erreur_mail.g.cs

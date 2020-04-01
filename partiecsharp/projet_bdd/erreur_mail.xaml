@@ -1,16 +1,15 @@
-﻿<Window x:Class="projet_bdd.erreur_connexion"
+﻿<Window x:Class="projet_bdd.erreur_mail"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="erreur_connexion" Height="300" Width="400">
+        Title="erreur_mail" Height="300" Width="400">
     <StackPanel Background="#FFEEF9E8">
+        
         <Label Content="ERREUR " HorizontalAlignment="Center" Margin="20" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontStyle="Italic" />
-        <Label Content="pseudo ou mot de passe incorrect, réessayez" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red"/>
+        <Label Content="Adresse Mail, deja associée à un compte" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red"/>
         <Button Content="Ok" Click="ok" HorizontalAlignment="Center" Height="64" Margin="50" VerticalAlignment="Bottom" Width="96" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
-
-
     </StackPanel>
 </Window>

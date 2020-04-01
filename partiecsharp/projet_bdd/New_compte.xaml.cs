@@ -28,8 +28,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
-
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -47,17 +46,13 @@ namespace projet_bdd
             MySqlDataReader reader = command1.ExecuteReader();
             command1.Dispose();
 
-            string[] list_pseudo = new string[reader.FieldCount];
             while (reader.Read())   
             {   
 
-                if (new_pseudo.Text == reader.GetValue(0).ToString() ||( mail.Text== reader.GetValue(1).ToString()))
+                if (email.Text==reader.GetValue(0).ToString())
                 {
-                   //Probleme existe deja
-                }
-                else
-                {
-                    //Création du nouvelle individu dans la table
+                    erreur_mail p = new erreur_mail();
+                    p.Show();
                 }
             }
             Creation_ok a = new Creation_ok();
