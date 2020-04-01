@@ -63,7 +63,7 @@ namespace projet_bdd
             string adr = adresse.Text;
             string v = ville.Text;
             DateTime? d = date.SelectedDate;
-            string p = new_pseudo.Text;
+            string p = email.Text;
             string m = mdp.Text;
 
 
