@@ -9,7 +9,7 @@
     <Grid Background="#FFEEF9E8">
         <StackPanel Orientation="Vertical">
             <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center"/>
-            <Grid Margin="20">
+            <Grid>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50">
                     <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
@@ -26,9 +26,10 @@
                     <Label Content="Liste des ingredients, séparée par des ';' :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox x:Name="listingredient" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
+
                 </StackPanel>
             </Grid>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="5">
                 <Button Content="Retour" Width="100" Click="Retour" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
                 <Button Content="Valider" Width="100" Click="Validation" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
             </StackPanel>

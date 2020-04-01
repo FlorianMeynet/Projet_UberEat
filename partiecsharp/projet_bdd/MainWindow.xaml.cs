@@ -30,7 +30,7 @@ namespace projet_bdd
 
         private void conexion(object sender, RoutedEventArgs e)
         {
-            MySqlConnection maConnexion = null;
+           MySqlConnection maConnexion = null;
             try
             {
                 string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
