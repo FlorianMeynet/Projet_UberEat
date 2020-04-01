@@ -9,7 +9,7 @@
 
     <Grid Background="#FFEEF9E8">
 
-        <Grid HorizontalAlignment="Left" Height="414" Margin="27,0,0,0" VerticalAlignment="Center" Width="731">
+        <Grid HorizontalAlignment="Center" Height="414" Margin="27,0,0,0" VerticalAlignment="Center" Width="731">
             <Grid.RowDefinitions>
                 <RowDefinition Height="233*"/>
                 <RowDefinition Height="181*"/>

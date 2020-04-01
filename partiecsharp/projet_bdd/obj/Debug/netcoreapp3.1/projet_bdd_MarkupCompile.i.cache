@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\code\Projet_UberEat\partiecsharp\projet_bdd\App.xaml
-8-880033917
+9991839614
 
-122081740906
+13-2659601
 19330424098
-Acceuil.xaml;commande.xaml;CreationRecette.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;MainWindow.xaml;New_compte.xaml;
+Acceuil.xaml;Acceuil_commande.xaml;commande.xaml;CreationRecette.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;MainWindow.xaml;New_compte.xaml;
 
 False
 

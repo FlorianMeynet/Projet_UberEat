@@ -29,7 +29,7 @@ namespace projet_bdd
 
         private void Retour(object sender, RoutedEventArgs e)
         {
-            MainWindow a = new MainWindow();
+            Acceuil a = new Acceuil();
             a.Show();
             this.Close();
         }

@@ -6,32 +6,31 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="CreationRecette" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFEEF9E8">
         <StackPanel Orientation="Vertical">
-            <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center"></Label>
+            <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center"/>
             <Grid Margin="20">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50">
-                    <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-                    <TextBox Name="nomrecette" Margin="10" > </TextBox>
+                    <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
-                    <Label Content="Descriptif :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-                    <TextBox Name="descriptif" Margin="10" ></TextBox>
+                    <Label Content="Descriptif :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBox Name="descriptif" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="50">
                     <Label Content="Prix de la recette :" Margin="10" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        
-                    <TextBox x:Name="prix" Margin="10" Width="15" />
-                        <Label Content="euros" Margin="10" Width="40" FontStyle="Italic"></Label>
+                        <TextBox x:Name="prix" Margin="10" Width="40" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
+                        <Label Content="euros" Margin="10" Width="40" FontStyle="Italic"/>
                     </StackPanel>
                     <Label Content="Liste des ingredients, séparée par des ';' :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox x:Name="listingredient" Margin="10" />
+                    <TextBox x:Name="listingredient" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
                 </StackPanel>
             </Grid>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Retour" Width="100" Click="Retour"></Button>
-            <Button Content="Valider" Width="100" Click="Validation"></Button>
+                <Button Content="Retour" Width="100" Click="Retour" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
+                <Button Content="Valider" Width="100" Click="Validation" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
             </StackPanel>
         </StackPanel>
     </Grid>
