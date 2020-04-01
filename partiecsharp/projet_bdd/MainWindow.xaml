@@ -16,8 +16,7 @@
         <Grid HorizontalAlignment="Center" Height="360"  VerticalAlignment="Center" Width="372">
 
             <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5" />
-            <TextBox x:Name="mail" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="30
-                     " BorderBrush="{x:Null}" Background="#FFE0D8D8" FontSize="18" Foreground="Black" SelectionTextBrush="#FF151414" />
+            <TextBox x:Name="mail" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="30" BorderBrush="{x:Null}" Background="#FFE0D8D8" FontSize="18" Foreground="Black" SelectionTextBrush="#FF151414" />
             <TextBox x:Name="mdp" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="268" Height="30" BorderBrush="{x:Null}" FontSize="18" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
             <Button Content="Pas encore de compte ?" Click="notyet" HorizontalAlignment="Center" Height="19" Margin="0,309,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Segoe UI Black" Foreground="Black" Visibility="Visible" Opacity="0.5" BorderBrush="{x:Null}" />
             <Label Content="Mail :" HorizontalAlignment="Left" Margin="46,43,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" FontSize="16"/>

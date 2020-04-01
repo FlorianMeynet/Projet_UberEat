@@ -45,42 +45,56 @@ namespace projet_bdd
 
             MySqlDataReader reader = command1.ExecuteReader();
             command1.Dispose();
-
+            bool existe = false;
             while (reader.Read())   
             {   
 
                 if (email.Text==reader.GetValue(0).ToString())
                 {
-                    erreur_mail p = new erreur_mail();
-                    p.Show();
+                    erreur_mail pa = new erreur_mail();
+                    pa.Show();
+                    existe = false;
                 }
+                
             }
-            Creation_ok a = new Creation_ok();
-            a.Show();
-            this.Close();
-            string name = nom.Text;
-            string pre = prenom.Text;
-            string adr = adresse.Text;
-            string v = ville.Text;
-            DateTime? d = date.SelectedDate;
-            string p = email.Text;
-            string m = mdp.Text;
-
-
-            string insertTable = " insert into Professeur  Values ();";   
-            MySqlCommand command3 = maConnexion.CreateCommand();
-            command3.CommandText = insertTable;
-            try
+            if (existe == false)
             {
-                command3.ExecuteNonQuery();
-            }
-            catch (MySqlException er)
-            {
-                Console.WriteLine(" ErreurConnexion : " + er.ToString());
-                Console.ReadLine();
-                return;
-            }
+                Creation_ok a = new Creation_ok();
+                a.Show();
+                this.Close();
+                string name = nom.Text;
+                string pre = prenom.Text;
+                string adr = adresse.Text;
+                string v = ville.Text;
+                DateTime? d = date.SelectedDate;
+                string t = tel.Text;
+                bool? estcreateur = createur.IsChecked;
+                bool estcreateur1 = true;
+                if (estcreateur==false || estcreateur == null)
+                {
+                    estcreateur1 = false;
+                }
+                
+                string p = email.Text;
+                string m = mdp.Text;
 
+
+                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values (" + name + "," + pre + "," + adr + "," + v + "," + d + "," + t + "," + p + "," + estcreateur1.ToString() + "," + "0" + "," + m;
+                MySqlCommand command3 = maConnexion.CreateCommand();
+                command3.CommandText = insertTable;
+                try
+                {
+                    command3.ExecuteNonQuery();
+                }
+                catch (MySqlException er)
+                {
+                    Console.WriteLine(" ErreurConnexion : " + er.ToString());
+                    Console.ReadLine();
+                    return;
+                }
+
+            }
+            
         }
 
         private void retour(object sender, RoutedEventArgs e)
@@ -89,5 +103,7 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
+
+        
     }
 }

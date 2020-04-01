@@ -15,9 +15,9 @@
                     <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
                     <Label Content="Descriptif :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox Name="descriptif" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
+                    <TextBox Name="descriptif" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B" Height="100" Width="200"/>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="50">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="40">
                     <Label Content="Prix de la recette :" Margin="10" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBox x:Name="prix" Margin="10" Width="40" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
