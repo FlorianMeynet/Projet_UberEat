@@ -17,14 +17,14 @@
                     <Label Content="Descriptif :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox Name="descriptif" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B" Height="100" Width="200"/>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="0,20">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="0,10">
                     <Label Content="Prix de la recette :" Margin="10" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBox x:Name="prix" Margin="10" Width="40" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
                         <Label Content="euros" Margin="10" Width="40" FontStyle="Italic"/>
                     </StackPanel>
                     <Label Content="Liste des ingredients :" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,-10">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,-10">
                         <ComboBox Margin="20">
                             <ComboBoxItem Content="Choisir les ingredient" IsSelected="True"/>
                             <ComboBoxItem Content="OUI"/>
@@ -34,20 +34,23 @@
 
 
                     </StackPanel>
-                    <ListBox Name="listBox1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Height="167" Width="200">
-                        <ListBoxItem Content="Ingredient 1"/>
-                        <ListBoxItem Content="Ingredient 2"/>
-                        <ListBoxItem Content="Ingredient 3"/>
-                        <ListBoxItem Content="Ingredient 4"/>
-                        <ListBoxItem Content="Ingredient 5"/>
-                        <ListBoxItem Content="Ingredient 6"/>
-                        <ListBoxItem Content="..."/>
-                        
-                    </ListBox>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="20,0">
 
+                        <Label Content="Liste d'ingredient choisi :" Margin="10" HorizontalAlignment="Left" Width="148" FontStyle="Normal" FontWeight="Bold"/>
+                        <ListBox Name="listBox1" HorizontalAlignment="Center"  Height="120" Width="200"  Background="#FFEEF9E8">
+                            <ListBoxItem Content="Ingredient 1"/>
+                            <ListBoxItem Content="Ingredient 2"/>
+                            <ListBoxItem Content="Ingredient 3"/>
+                            <ListBoxItem Content="Ingredient 4"/>
+                            <ListBoxItem Content="Ingredient 5"/>
+                            <ListBoxItem Content="Ingredient 6"/>
+                            <ListBoxItem Content="..."/>
+
+                        </ListBox>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,-">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,-10">
                 <Button Content="Retour" Width="100" Click="Retour" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
                 <Button Content="Valider" Width="100" Click="Validation" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
             </StackPanel>
