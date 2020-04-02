@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="Commande" Height="300" Width="400">
+        Title="Commande" Height="450" Width="800">
     <Grid Background="#FFEEF9E8">
-        
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-            
+
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
                 <Label Content="Pseudo :" HorizontalAlignment="Center"  FontWeight="Bold" />
@@ -27,7 +27,36 @@
                 </Button>
             </StackPanel>
         </StackPanel>
-        
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="50">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="60">
+                <Label Content="Entrée :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                <ComboBox>
+                    <ComboBoxItem Content="Entrée" IsSelected="True"/>
+                    <ComboBoxItem Content="OUI"/> 
+                    <ComboBoxItem Content="OUI3"/> 
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="60">
+                <Label Content="Plat :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
+                <ComboBox>
+                    <ComboBoxItem Content="Plat" IsSelected="True"/>
+                    <ComboBoxItem>OUI</ComboBoxItem>
+                    <ComboBoxItem Content="OUI3"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="60">
+                <Label Content="Dessert :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
+                <ComboBox>
+                    <ComboBoxItem Content="Dessert" IsSelected="True"/>
+                    <ComboBoxItem Content="OUI"/> 
+                    <ComboBoxItem Content="OUI3"/>
+                </ComboBox>
+            </StackPanel>
+
+        </StackPanel>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="78"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
 
 

@@ -79,7 +79,7 @@ namespace projet_bdd
                 string m = mdp.Text;
 
 
-                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values (" + name + "," + pre + "," + adr + "," + v + "," + d + "," + t + "," + p + "," + estcreateur1.ToString() + "," + "0" + "," + m;
+                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values (" + name + "," + pre + "," + adr + "," + v + "," + d + "," + t + "," + p + "," + estcreateur1.ToString() + "," + "0" + "," + m+");";
                 MySqlCommand command3 = maConnexion.CreateCommand();
                 command3.CommandText = insertTable;
                 try
