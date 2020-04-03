@@ -25,10 +25,10 @@
                     </StackPanel>
                     <Label Content="Liste des ingredients :" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,-10">
-                        <ComboBox Name="elementchoisi" Margin="20" Width="100">
+                        <ComboBox Name="ingredient" Margin="20" Width="100">
                         </ComboBox>
-                        <ComboBox Name="nombre" Text="Chiffre" Margin="20">
-                        </ComboBox>
+                        <TextBox Name="nombre" Margin="20" Width="30"/>
+
                         <Button Content="Ajouter ingrédient" Click="ajout" Background="AliceBlue" FontFamily="Segoe UI Black" FontSize="12" Margin="10" BorderBrush="{x:Null}" Height="25"/>
 
 
@@ -40,10 +40,7 @@
                             <ListBoxItem Content="Ingredient 1"/>
                             <ListBoxItem Content="Ingredient 2"/>
                             <ListBoxItem Content="Ingredient 3"/>
-                            <ListBoxItem Content="Ingredient 4"/>
-                            <ListBoxItem Content="Ingredient 5"/>
-                            <ListBoxItem Content="Ingredient 6"/>
-                            <ListBoxItem Content="..."/>
+                            
 
                         </ListBox>
                     </StackPanel>

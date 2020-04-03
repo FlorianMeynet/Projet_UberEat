@@ -21,5 +21,10 @@ namespace projet_bdd
         {
             InitializeComponent();
         }
+
+        private void commande(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

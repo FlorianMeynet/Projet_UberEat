@@ -21,42 +21,6 @@ namespace projet_bdd
         public CreationRecette()
         {
             InitializeComponent();
-            for (int k = 0; k< 11; k++)
-                {
-                nombre.Items.Add(k.ToString());
-                }
-
-
-            MySqlConnection maConnexion = null;
-            try
-            {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
-                maConnexion = new MySqlConnection(connexionString);
-                maConnexion.Open();
-            }
-            catch (MySqlException er)
-            {
-                Console.WriteLine(" ErreurConnexion : " + er.ToString());
-                return;
-            }
-
-
-            string requete = "Select Nom from Recette;";
-            MySqlCommand command1 = maConnexion.CreateCommand();
-            command1.CommandText = requete;
-
-            MySqlDataReader reader = command1.ExecuteReader();
-            command1.Dispose();
-
-            while (reader.Read())
-            {
-                if (reader.GetValue(0).ToString() != "")
-                {
-                    elementchoisi.Items.Add(reader.GetValue(0).ToString());
-                }
-            }
-
-
         }
 
         private void Validation(object sender, RoutedEventArgs e)
@@ -108,7 +72,36 @@ namespace projet_bdd
                 command2.Dispose();
             }
         }
+        private void ajout(object sender, RoutedEventArgs e)
+        {
+            //VOIR SI Y A BESOIN
+            string requete = "Select Nom,categorie from Ingredient;";
+            MySqlCommand command1 = maConnexion.CreateCommand();
+            command1.CommandText = requete;
+            MySqlDataReader reader = command1.ExecuteReader();
+            command1.Dispose();
 
+
+
+            List<List<string>> list_ingre = new List<List<string>>();
+            while (reader.Read())
+            {
+                List<string> l = new List<string>();
+                l.Add(reader.GetValue(0).ToString());
+                l.Add(reader.GetValue(1).ToString());
+                list_ingre.Add(l);
+                ingredient.Items.Add(reader.GetValue(0).ToString());
+            }
+
+            if (this.ingredient.Text != "" && this.nombre.Text.Trim(' ') != "")
+            {
+                listBox1.Items.Add(this.ingredient.Text + " : " + this.nombre.Text);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez choisir un ingrédient");
+            }
+        }
         private void Retour(object sender, RoutedEventArgs e)
         {
             Acceuil a = new Acceuil();
@@ -116,18 +109,7 @@ namespace projet_bdd
             this.Close();
         }
 
-        private void ajout(object sender, RoutedEventArgs e)
-        {
-            if (this.elementchoisi.Text != "")
-            {
-                listBox1.Items.Add(this.elementchoisi.Text + " : " + this.nombre.Text);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez choisir un ingrédient");
-
-            }
-        }
+       
 
 
     }
