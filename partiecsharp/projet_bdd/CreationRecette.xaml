@@ -25,10 +25,9 @@
                     </StackPanel>
                     <Label Content="Liste des ingredients :" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,-10">
-                        <ComboBox Margin="20">
-                            <ComboBoxItem Content="Choisir les ingredient" IsSelected="True"/>
-                            <ComboBoxItem Content="OUI"/>
-                            <ComboBoxItem Content="OUI3"/>
+                        <ComboBox Name="elementchoisi" Margin="20" Width="100">
+                        </ComboBox>
+                        <ComboBox Name="nombre" Text="Chiffre" Margin="20">
                         </ComboBox>
                         <Button Content="Ajouter ingrédient" Click="ajout" Background="AliceBlue" FontFamily="Segoe UI Black" FontSize="12" Margin="10" BorderBrush="{x:Null}" Height="25"/>
 
@@ -36,7 +35,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="20,0">
 
-                        <Label Content="Liste d'ingredient choisi :" Margin="10" HorizontalAlignment="Left" Width="148" FontStyle="Normal" FontWeight="Bold"/>
+                        <Label Content="Liste d'ingredients choisis :" Margin="10" HorizontalAlignment="Left" Width="148" FontStyle="Normal" FontWeight="Bold"/>
                         <ListBox Name="listBox1" HorizontalAlignment="Center"  Height="120" Width="200"  Background="#FFEEF9E8">
                             <ListBoxItem Content="Ingredient 1"/>
                             <ListBoxItem Content="Ingredient 2"/>

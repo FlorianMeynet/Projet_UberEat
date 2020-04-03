@@ -21,6 +21,42 @@ namespace projet_bdd
         public CreationRecette()
         {
             InitializeComponent();
+            for (int k = 0; k< 11; k++)
+                {
+                nombre.Items.Add(k.ToString());
+                }
+
+
+            MySqlConnection maConnexion = null;
+            try
+            {
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                maConnexion = new MySqlConnection(connexionString);
+                maConnexion.Open();
+            }
+            catch (MySqlException er)
+            {
+                Console.WriteLine(" ErreurConnexion : " + er.ToString());
+                return;
+            }
+
+
+            string requete = "Select Nom from Recette;";
+            MySqlCommand command1 = maConnexion.CreateCommand();
+            command1.CommandText = requete;
+
+            MySqlDataReader reader = command1.ExecuteReader();
+            command1.Dispose();
+
+            while (reader.Read())
+            {
+                if (reader.GetValue(0).ToString() != "")
+                {
+                    elementchoisi.Items.Add(reader.GetValue(0).ToString());
+                }
+            }
+
+
         }
 
         private void Validation(object sender, RoutedEventArgs e)
@@ -43,7 +79,7 @@ namespace projet_bdd
             string nomrecettee = nomrecette.Text;
             string descriptife = descriptif.Text;
             float prixs = float.Parse(prix.Text);
-            string listeingrediente = listingredient.Text;
+            string? listeingrediente = listBox1.Items.ToString(); // Il faudra verifier cette récuperation
 
 
             string requete = "Select Nom from Recette;";
@@ -79,5 +115,20 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
+
+        private void ajout(object sender, RoutedEventArgs e)
+        {
+            if (this.elementchoisi.Text != "")
+            {
+                listBox1.Items.Add(this.elementchoisi.Text + " : " + this.nombre.Text);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez choisir un ingrédient");
+
+            }
+        }
+
+
     }
 }
