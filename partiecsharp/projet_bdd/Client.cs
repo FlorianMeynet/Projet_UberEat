@@ -7,7 +7,7 @@ namespace projet_bdd
 {
     class Client
     {
-        private int idClient;
+        int idClient;
         private string nom;
         private string prenom;
         private string adresse;
