@@ -30,6 +30,7 @@ namespace projet_bdd
 
         private void conexion(object sender, RoutedEventArgs e)
         {
+            /*
            MySqlConnection maConnexion = null;
             try
             {
@@ -83,6 +84,10 @@ namespace projet_bdd
                 erreur_connexion a = new erreur_connexion();
                 a.Show();
             }
+            */
+            Acceuil page = new Acceuil();
+            page.Show();
+            this.Close();
         }
 
         private void notyet(object sender, RoutedEventArgs e)
