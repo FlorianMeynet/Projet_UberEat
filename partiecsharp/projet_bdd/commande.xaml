@@ -30,33 +30,38 @@
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="50">
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="60">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="40">
                 <Label Content="Entrée :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                <ComboBox>
+                <ComboBox Name="entree">
                     <ComboBoxItem Content="Entrée" IsSelected="True"/>
                     <ComboBoxItem Content="OUI"/> 
                     <ComboBoxItem Content="OUI3"/> 
                 </ComboBox>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="60">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="40">
                 <Label Content="Plat :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
-                <ComboBox>
+                <ComboBox Name="plat">
                     <ComboBoxItem Content="Plat" IsSelected="True"/>
                     <ComboBoxItem>OUI</ComboBoxItem>
                     <ComboBoxItem Content="OUI3"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="60">
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="40">
                 <Label Content="Dessert :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
-                <ComboBox>
+                <ComboBox Name="dessert">
                     <ComboBoxItem Content="Dessert" IsSelected="True"/>
                     <ComboBoxItem Content="OUI"/> 
                     <ComboBoxItem Content="OUI3"/>
                 </ComboBox>
             </StackPanel>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="40">
+                <Label Content="Quantité" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
+                <TextBox Name="quantite" HorizontalContentAlignment="Center" Width="35">*</TextBox>
+            </StackPanel>
 
         </StackPanel>
+        <Button Click="Confirmer" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" Width="90"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"> Confirmer </Button>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="78"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
 
 
