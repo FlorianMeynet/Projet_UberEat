@@ -43,9 +43,13 @@ namespace projet_bdd
             string nomrecettee = nomrecette.Text;
             string descriptife = descriptif.Text;
             float prixs = float.Parse(prix.Text);
-            string? listeingrediente = listBox1.Items.ToString(); // Il faudra verifier cette récuperation
-
-
+            string listeingrediente = ""; 
+            foreach (string valeur in listBox1.Items)
+            {
+                string[] a=valeur.Split("");
+                listeingrediente += a[0] + " : " + a[1] + "\n";
+            }
+            
             string requete = "Select Nom from Recette;";
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
