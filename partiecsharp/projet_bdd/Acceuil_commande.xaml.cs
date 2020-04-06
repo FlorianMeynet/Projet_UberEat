@@ -24,7 +24,16 @@ namespace projet_bdd
 
         private void commande(object sender, RoutedEventArgs e)
         {
+            Commande a = new Commande();
+            a.Show();
+            this.Close();
+        }
 
+        private void retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.Show();
+            this.Close();
         }
     }
 }

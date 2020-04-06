@@ -40,7 +40,7 @@
             <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="49,41,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
             <TextBox Name="tel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="49,0,0,35" Grid.Row="1" Background="#FFCFC1C1"/>
             <Label Content="Telephone :" HorizontalAlignment="Left" Margin="49,96,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
-            <CheckBox x:Name="createur" Content="Créateur" HorizontalAlignment="Left" Margin="459,207,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+            <CheckBox Name="createur" Content="Créateur" HorizontalAlignment="Left" Margin="459,207,0,0" VerticalAlignment="Top"/>
         </Grid>
         <Label Content="Création d'un compte :" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="42" Width="216" Foreground="Black" FontSize="20"/>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />

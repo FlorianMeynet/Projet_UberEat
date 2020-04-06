@@ -80,11 +80,11 @@ namespace projet_bdd
         {
             //VOIR SI Y A BESOIN
             string requete = "Select Nom,categorie from Ingredient;";
-            MySqlCommand command1 = maConnexion.CreateCommand();
+             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
             MySqlDataReader reader = command1.ExecuteReader();
             command1.Dispose();
-
+            
 
 
             List<List<string>> list_ingre = new List<List<string>>();
