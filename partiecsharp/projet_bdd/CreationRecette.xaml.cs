@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -49,9 +50,23 @@ namespace projet_bdd
                 string[] new_a1 = a[1].Split("-");
                 listeingrediente += a[0] + " : " + new_a1[0] +" "+new_a1[1]+ " / ";  //Ajout d'un ingredient dans les listes des ingredients
             }
-            
+            string cat="";
 
-            string requete = "Select Nom from Recette;";   //On verifie que le nom de la recette n'existe pas deja
+
+            if (entree.IsChecked == true)
+            {
+                cat ="entree";
+            }
+            else if (plat.IsChecked == true)
+            {
+                cat ="Plat";   
+            }
+            else if(dessert.IsChecked==true)
+            {
+                cat =  "Dessert";
+            }
+
+            string requete = "Select Nom from Recette where categorie="+cat+";";   //On verifie que le nom de la recette n'existe pas deja
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
@@ -69,7 +84,7 @@ namespace projet_bdd
 
             if (existe == false)
             {
-                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`) Values(" + nomrecette + "," + descriptife + "," + prixs + "," + listeingrediente+");";
+                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`,`categorie`) Values(" + nomrecette + "," + descriptife + "," + prixs + "," + listeingrediente+""+ cat +");";
                 MySqlCommand command2 = maConnexion.CreateCommand();
                 command1.CommandText = requete2;
 
@@ -77,6 +92,7 @@ namespace projet_bdd
                 command2.Dispose();
             }
         }
+
         private void ajout(object sender, RoutedEventArgs e)
         {
             //VOIR SI Y A BESOIN
@@ -112,7 +128,6 @@ namespace projet_bdd
                         MessageBox.Show("probleme");
                     }
                 }
-                
             }
             else
             {
@@ -125,9 +140,5 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
-
-       
-
-
     }
 }
