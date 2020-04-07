@@ -39,18 +39,19 @@ namespace projet_bdd
                 return;
             }
 
-
-            string nomrecettee = nomrecette.Text;
-            string descriptife = descriptif.Text;
-            float prixs = float.Parse(prix.Text);
+            string nomrecettee = nomrecette.Text;  //Nom saisi
+            string descriptife = descriptif.Text;  //Descriptif
+            float prixs = float.Parse(prix.Text);  //Prix
             string listeingrediente = ""; 
             foreach (string valeur in listBox1.Items)
             {
-                string[] a=valeur.Split("");
-                listeingrediente += a[0] + " : " + a[1] + "\n";
+                string[] a=valeur.Split(":");
+                string[] new_a1 = a[1].Split("-");
+                listeingrediente += a[0] + " : " + new_a1[0] +" "+new_a1[1]+ " / ";  //Ajout d'un ingredient dans les listes des ingredients
             }
             
-            string requete = "Select Nom from Recette;";
+
+            string requete = "Select Nom from Recette;";   //On verifie que le nom de la recette n'existe pas deja
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
@@ -99,7 +100,19 @@ namespace projet_bdd
 
             if (this.ingredient.Text != "" && this.nombre.Text.Trim(' ') != "")
             {
-                listBox1.Items.Add(this.ingredient.Text + " : " + this.nombre.Text);
+                foreach (List<string> l in list_ingre)
+                {
+                    if (l[0] == this.ingredient.Text)
+                    {
+                        string cat = l[1];
+                        listBox1.Items.Add(this.ingredient.Text + " : " + this.nombre.Text + "-" + cat);
+                    }
+                    else
+                    {
+                        MessageBox.Show("probleme");
+                    }
+                }
+                
             }
             else
             {
