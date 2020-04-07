@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2020-04-06 16:18
+-- Generated: 2020-04-07 17:45
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -87,9 +87,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `TableProjet`.`stock` (
   `idstock` INT(11) NOT NULL AUTO_INCREMENT,
   `idingredient` INT(11) NULL DEFAULT NULL,
-  `quantiteMin` INT(11) NULL DEFAULT NULL,
-  `quantiteMax` INT(11) NULL DEFAULT NULL,
-  `quantite` INT(11) NULL DEFAULT NULL,
+  `quantiteMin` FLOAT(11) NULL DEFAULT NULL,
+  `quantiteMax` FLOAT(11) NULL DEFAULT NULL,
+  `quantite` FLOAT(11) NULL DEFAULT NULL,
   `idfournisseur` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`idstock`),
   INDEX `idIngredient_idx` (`idingredient` ASC) VISIBLE,
@@ -108,28 +108,10 @@ CREATE TABLE IF NOT EXISTS `TableProjet`.`stock` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `TableProjet`.`Cuisine` (
-  `idCuisine` INT(11) NOT NULL AUTO_INCREMENT,
-  `idRecette` INT(11) NOT NULL,
-  `quantiteMax` INT(11) NULL DEFAULT NULL,
-  `quantiteMin` INT(11) NULL DEFAULT NULL,
-  `quantite` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`idCuisine`, `idRecette`),
-  UNIQUE INDEX `idCuisine_UNIQUE` (`idCuisine` ASC) VISIBLE,
-  INDEX `idRecette_idx` (`idRecette` ASC) VISIBLE,
-  CONSTRAINT `idRecette`
-    FOREIGN KEY (`idRecette`)
-    REFERENCES `TableProjet`.`Recette` (`idRecette`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
 
 
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Claude','Jean','rue de la paie','bourg','1957-11-24',0674586954,'jean.claude@orange.fr',0,0,'1234');
