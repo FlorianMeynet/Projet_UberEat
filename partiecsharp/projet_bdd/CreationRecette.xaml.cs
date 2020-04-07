@@ -84,7 +84,7 @@ namespace projet_bdd
 
             if (existe == false)
             {
-                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`,`categorie`) Values(" + nomrecette + "," + descriptife + "," + prixs + "," + listeingrediente+""+ cat +");";
+                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`,`categorie`) Values(" + nomrecette + "," + descriptife + "," + prixs + "," + listeingrediente+ ClientStatic.idCreateur + cat +");";
                 MySqlCommand command2 = maConnexion.CreateCommand();
                 command1.CommandText = requete2;
 

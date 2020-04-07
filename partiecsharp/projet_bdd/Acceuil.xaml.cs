@@ -36,5 +36,11 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
+
+        private void cree_plat(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }

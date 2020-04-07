@@ -72,10 +72,19 @@ namespace projet_bdd
                 ClientStatic.estCreateur = bool.Parse(reader.GetValue(8).ToString());
                 ClientStatic.capitalCooks = int.Parse(reader.GetValue(9).ToString());
                 ClientStatic.mdp = reader.GetValue(10).ToString();
-
-                Acceuil page = new Acceuil();
-                page.Show();
-                this.Close();
+                if (ClientStatic.estCreateur == true)
+                {
+                    ClientStatic.idCreateur = recupt_idcreateur();
+                    Acceuil page = new Acceuil();
+                    page.Show();
+                    this.Close();
+                }
+                else
+                {
+                    Acceuil_commande page = new Acceuil_commande();
+                    page.Show();
+                    this.Close();
+                }   
             }
 
             else
@@ -84,7 +93,31 @@ namespace projet_bdd
                 a.Show();
             }
         }
+        private int recupt_idcreateur()
+        {
+            MySqlConnection maConnexion = null;
+            try
+            {
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
 
+                maConnexion = new MySqlConnection(connexionString);
+                maConnexion.Open();
+            }
+            catch (MySqlException er)
+            {
+                Console.WriteLine(" ErreurConnexion : " + er.ToString());
+                return(0);
+            }
+
+            string requete = "SELECT idCreateur FROM createur c natural join client cl where idClient="+ClientStatic.idClient;
+            MySqlCommand command1 = maConnexion.CreateCommand();
+            command1.CommandText = requete;
+
+            MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
+            command1.Dispose();
+            return(int.Parse(reader.GetValue(0).ToString()));
+
+        }
         private void notyet(object sender, RoutedEventArgs e)
         {
             New_compte page = new New_compte();
