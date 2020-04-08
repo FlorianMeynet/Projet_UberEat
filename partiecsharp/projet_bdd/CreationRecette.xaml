@@ -10,7 +10,7 @@
         <StackPanel Orientation="Vertical">
             <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center"/>
             <Grid>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50,40">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50,10">
                     <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
@@ -47,8 +47,6 @@
                             <ListBoxItem Content="Ingredient 1"/>
                             <ListBoxItem Content="Ingredient 2"/>
                             <ListBoxItem Content="Ingredient 3"/>
-                            
-
                         </ListBox>
                     </StackPanel>
                 </StackPanel>

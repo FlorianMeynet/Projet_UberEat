@@ -55,7 +55,7 @@ namespace projet_bdd
 
             if (entree.IsChecked == true)
             {
-                cat ="entree";
+                cat ="Entrée";
             }
             else if (plat.IsChecked == true)
             {
@@ -96,8 +96,21 @@ namespace projet_bdd
         private void ajout(object sender, RoutedEventArgs e)
         {
             //VOIR SI Y A BESOIN
+            MySqlConnection maConnexion = null;
+            try
+            {
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                maConnexion = new MySqlConnection(connexionString);
+                maConnexion.Open();
+            }
+            catch (MySqlException er)
+            {
+                Console.WriteLine(" ErreurConnexion : " + er.ToString());
+                return;
+            }
+
             string requete = "Select Nom,categorie from Ingredient;";
-             MySqlCommand command1 = maConnexion.CreateCommand();
+            MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
             MySqlDataReader reader = command1.ExecuteReader();
             command1.Dispose();

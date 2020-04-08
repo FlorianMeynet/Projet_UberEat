@@ -10,7 +10,7 @@
     <Grid Background="#FFEEF9E8">
 
 
-        <Image HorizontalAlignment="Left" Height="382" Margin="484,0,0,0" VerticalAlignment="Center" Width="524" Source="cooking.jpg"/>
+        <Image HorizontalAlignment="Left" Height="382" Margin="484,0,0,0" VerticalAlignment="Center" Width="524" Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\cooking.jpg"/>
         <Label Content="Log In" HorizontalAlignment="Center" Height="75"  VerticalAlignment="Top" Width="168" FontSize="48" Background="{x:Null}" Foreground="Black" FontFamily="Roboto" FontWeight="Bold"/>
 
         <Grid HorizontalAlignment="Center" Height="360"  VerticalAlignment="Center" Width="372">

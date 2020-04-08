@@ -1,0 +1,20 @@
+﻿<Window x:Class="projet_bdd.panier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projet_bdd"
+        mc:Ignorable="d"
+        Title="panier" Height="350" Width="400">
+    <Grid Background="#FFEEF9E8">
+        <Label Content="PANIER :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListBox Name="listBox1"  Height="120" Width="200"  Background="#FFEEF9E8"/>
+            <Button Content="Valider le Panier" Click="valider_panier"  Margin="40"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
+        </StackPanel>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" >
+            <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\croix.png" Width="25"/>
+        </Button>
+
+    </Grid>
+</Window>

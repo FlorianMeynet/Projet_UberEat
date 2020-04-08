@@ -10,7 +10,6 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
 
-
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
                 <Label Content="Pseudo :" HorizontalAlignment="Center"  FontWeight="Bold" />
                 <TextBox Name="pseudo" Margin="10" Height="18" Background="#FFE0D8D8"  SelectionTextBrush="#FF1D1B1B" Width="80" BorderBrush="{x:Null}" />
@@ -20,6 +19,10 @@
                 <Label Content="Credit :" HorizontalAlignment="Center"  FontWeight="Bold" />
                 <TextBox Name="Credit" Margin="10" Background="#FFE0D8D8"  SelectionTextBrush="#FF1D1B1B" Width="60" BorderBrush="{x:Null}"/>
             </StackPanel>
+            
+            <Button HorizontalAlignment="Left" Click="afficher_panier" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="15" >
+                <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\panier.png" Width="40"/>
+            </Button>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="1" >
                 <Label Content="Deconnexion :" HorizontalAlignment="center" FontWeight="Bold" />
                 <Button Name="deco" HorizontalAlignment="Center"   Visibility="Visible"  Foreground="#FFEEF9E8" Click="deco_Click" Width="40" Background="{x:Null}" BorderBrush="{x:Null}">
@@ -34,8 +37,6 @@
                 <Label Content="Entrée :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                 <ComboBox Name="entree">
                     <ComboBoxItem Content="Entrée" IsSelected="True"/>
-                    <ComboBoxItem Content="OUI"/> 
-                    <ComboBoxItem Content="OUI3"/> 
                 </ComboBox>
             </StackPanel>
 
@@ -43,22 +44,15 @@
                 <Label Content="Plat :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
                 <ComboBox Name="plat">
                     <ComboBoxItem Content="Plat" IsSelected="True"/>
-                    <ComboBoxItem>OUI</ComboBoxItem>
-                    <ComboBoxItem Content="OUI3"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="40">
                 <Label Content="Dessert :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
                 <ComboBox Name="dessert">
                     <ComboBoxItem Content="Dessert" IsSelected="True"/>
-                    <ComboBoxItem Content="OUI"/> 
-                    <ComboBoxItem Content="OUI3"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="40">
-                <Label Content="Quantité" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
-                <TextBox Name="quantite" HorizontalContentAlignment="Center" Width="35">*</TextBox>
-            </StackPanel>
+            
 
         </StackPanel>
         <Button Click="Confirmer" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" Width="90"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"> Confirmer </Button>
