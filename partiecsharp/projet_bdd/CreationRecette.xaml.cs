@@ -46,9 +46,7 @@ namespace projet_bdd
             string listeingrediente = ""; 
             foreach (string valeur in listBox1.Items)
             {
-                string[] a=valeur.Split(":");
-                string[] new_a1 = a[1].Split("-");
-                listeingrediente += a[0] + " : " + new_a1[0] +" "+new_a1[1]+ " / ";  //Ajout d'un ingredient dans les listes des ingredients
+                listeingrediente += valeur + " / ";  //Ajout d'un ingredient dans les listes des ingredients
             }
             string cat="";
 
@@ -86,7 +84,7 @@ namespace projet_bdd
             {
                 string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`,`categorie`) Values(" + nomrecette + "," + descriptife + "," + prixs + "," + listeingrediente+ ClientStatic.idCreateur + cat +");";
                 MySqlCommand command2 = maConnexion.CreateCommand();
-                command1.CommandText = requete2;
+                command2.CommandText = requete2;
 
                 MySqlDataReader reader2 = command2.ExecuteReader();
                 command2.Dispose();
@@ -95,7 +93,7 @@ namespace projet_bdd
 
         private void ajout(object sender, RoutedEventArgs e)
         {
-            //VOIR SI Y A BESOIN
+            
             MySqlConnection maConnexion = null;
             try
             {

@@ -19,43 +19,49 @@
                 <Label Content="Credit :" HorizontalAlignment="Center"  FontWeight="Bold" />
                 <TextBox Name="Credit" Margin="10" Background="#FFE0D8D8"  SelectionTextBrush="#FF1D1B1B" Width="60" BorderBrush="{x:Null}"/>
             </StackPanel>
-            
+
             <Button HorizontalAlignment="Left" Click="afficher_panier" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="15" >
                 <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\panier.png" Width="40"/>
             </Button>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="1" >
                 <Label Content="Deconnexion :" HorizontalAlignment="center" FontWeight="Bold" />
                 <Button Name="deco" HorizontalAlignment="Center"   Visibility="Visible"  Foreground="#FFEEF9E8" Click="deco_Click" Width="40" Background="{x:Null}" BorderBrush="{x:Null}">
-                    <Image  Height="30"  Source="shutdown.png"/>
+                    <Image  Height="30"  Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\shutdown.png"/>
                 </Button>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="50">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="40">
-                <Label Content="Entrée :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                <ComboBox Name="entree">
-                    <ComboBoxItem Content="Entrée" IsSelected="True"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Content="Entrée :" VerticalAlignment="Center" FontWeight="Bold"/>
+                <ComboBox Name="entree" VerticalAlignment="Center">
+                    <ComboBoxItem Content="Choisir une entrée" IsSelected="True"/>
                 </ComboBox>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="40">
-                <Label Content="Plat :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
-                <ComboBox Name="plat">
-                    <ComboBoxItem Content="Plat" IsSelected="True"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Label Content="Plat :" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  />
+                <ComboBox Name="plat" VerticalAlignment="Center">
+                    <ComboBoxItem Content="Choisir un plat" IsSelected="True"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="40">
-                <Label Content="Dessert :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"  />
-                <ComboBox Name="dessert">
-                    <ComboBoxItem Content="Dessert" IsSelected="True"/>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" Margin="10">
+                <Label Content="Dessert :" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                <ComboBox Name="dessert" VerticalAlignment="Center">
+                    <ComboBoxItem Content="Choisir un dessert" IsSelected="True"/>
                 </ComboBox>
             </StackPanel>
-            
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Content="Boissons :" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                <ComboBox Name="Boissons" VerticalAlignment="Center">
+                    <ComboBoxItem Content="Choisir une boisson" IsSelected="True"/>
+                </ComboBox>
+            </StackPanel>
 
         </StackPanel>
-        <Button Click="Confirmer" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" Width="90"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"> Confirmer </Button>
+        <Button Content="Ajouter au panier" Click="ajouter_commande" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,377,0,0" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" Width="200"/>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="78"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
 
 

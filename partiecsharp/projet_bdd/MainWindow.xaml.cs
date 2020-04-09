@@ -31,7 +31,7 @@ namespace projet_bdd
         private void conexion(object sender, RoutedEventArgs e)
         {
             
-           MySqlConnection maConnexion = null;
+            MySqlConnection maConnexion = null;
             try
             {
                 string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
@@ -45,15 +45,13 @@ namespace projet_bdd
                 return;
             }
 
-
             string p = mail.Text;
-            string requete = "SELECT * FROM client WHERE adresseEmail=="+p+";";
+            string requete = "SELECT * FROM client WHERE adresseEmail="+p+";";
             
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
-            command1.Dispose();
             
             if (mdp.Text == reader.GetValue(10).ToString())  //Verification avec le mdp
             {
@@ -72,6 +70,7 @@ namespace projet_bdd
                 ClientStatic.estCreateur = bool.Parse(reader.GetValue(8).ToString());
                 ClientStatic.capitalCooks = int.Parse(reader.GetValue(9).ToString());
                 ClientStatic.mdp = reader.GetValue(10).ToString();
+
                 if (ClientStatic.estCreateur == true)
                 {
                     ClientStatic.idCreateur = recupt_idcreateur();
@@ -92,13 +91,15 @@ namespace projet_bdd
                 erreur_connexion a = new erreur_connexion();
                 a.Show();
             }
+            command1.Dispose();
+            reader.Close();
         }
         private int recupt_idcreateur()
         {
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -108,14 +109,18 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return(0);
             }
-
+            
             string requete = "SELECT idCreateur FROM createur c natural join client cl where idClient="+ClientStatic.idClient;
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
             command1.Dispose();
-            return(int.Parse(reader.GetValue(0).ToString()));
+            int a =int.Parse(reader.GetValue(0).ToString());
+            command1.Dispose();
+            reader.Close();
+
+            return (a);
 
         }
         private void notyet(object sender, RoutedEventArgs e)
