@@ -9,7 +9,14 @@
     <Grid Background="#FFEEF9E8">
         <Label Content="PANIER :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <ListBox Name="listBox1"  Height="120" Width="200"  Background="#FFEEF9E8"/>
+            <StackPanel Orientation="Horizontal" >
+                <ListBox Name="Recette"  Height="120" Width="200"  Background="#FFEEF9E8"/>
+                <ListBox Name="Prix"   Width="40"  Background="#FFEEF9E8"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Label Content="Totale :" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" />
+                <TextBlock Name="prix_tot" Width="40"/>
+            </StackPanel>
             <Button Content="Valider le Panier" Click="valider_panier"  Margin="40"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
         </StackPanel>
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" >

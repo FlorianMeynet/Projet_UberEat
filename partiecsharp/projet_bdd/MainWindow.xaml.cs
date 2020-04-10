@@ -25,7 +25,7 @@ namespace projet_bdd
         {
             InitializeComponent();
             ClientStatic.ClientStatic1();
-
+            Panier.PanierVide();
         }
 
         private void conexion(object sender, RoutedEventArgs e)
@@ -34,7 +34,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=nom_login;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();

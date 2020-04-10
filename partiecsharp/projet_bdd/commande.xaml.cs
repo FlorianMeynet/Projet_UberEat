@@ -141,16 +141,18 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
             }
 
-            string requete_list_ingre = "Select listingredient,idCreateur from Recette where Nom=" + choix + ";";
+            string requete_list_ingre = "Select idRecette,listingredient,idCreateur from Recette where Nom=" + choix + ";";
             MySqlCommand command_list = maConnexion.CreateCommand();
             command_list.CommandText = requete_list_ingre;
             
             MySqlDataReader reader_list = command_list.ExecuteReader();
             command_list.Dispose();
-            string list_ingredient = reader_list.GetValue(0).ToString();
+            string list_ingredient = reader_list.GetValue(1).ToString();
+            int id = int.Parse(reader_list.GetValue(0).ToString());
             if (Estenstock(list_ingredient))
             {
-                //Ajouter dans le panier
+                Panier.listIdRecette.Add(id);  //Ajouter dans le panier
+                //Gerer le fait que on enleve du stock ici ou seulement lors de la commande
             }
         }
         private bool Estenstock(string nom_plat)
