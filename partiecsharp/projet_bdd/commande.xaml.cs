@@ -193,7 +193,7 @@ namespace projet_bdd
                 int stock = int.Parse(reader_stock.GetValue(0).ToString());
                 if (stock < int.Parse(l[1]))
                 {
-                    return (false);
+                    return (false);  //Manque ingredient
                 }
             }
             return(true);  //On a un stock de chaque ingredient
