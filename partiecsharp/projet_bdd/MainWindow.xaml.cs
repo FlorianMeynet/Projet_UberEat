@@ -34,10 +34,10 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
-
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
+
             }
             catch (MySqlException er)
             {
@@ -46,12 +46,12 @@ namespace projet_bdd
             }
 
             string p = mail.Text;
-            string requete = "SELECT * FROM client WHERE adresseEmail="+p+";";
+            string requete = "SELECT * FROM client WHERE client.adresseEmail="+p+";";
             
-            MySqlCommand command1 = maConnexion.CreateCommand();
-            command1.CommandText = requete;
+            MySqlCommand command_all = maConnexion.CreateCommand();
+            command_all.CommandText = requete;
 
-            MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
+            MySqlDataReader reader = command_all.ExecuteReader();  //reader a les valeurs retourner par la requette
             
             if (mdp.Text == reader.GetValue(10).ToString())  //Verification avec le mdp
             {
@@ -91,7 +91,7 @@ namespace projet_bdd
                 erreur_connexion a = new erreur_connexion();
                 a.Show();
             }
-            command1.Dispose();
+            command_all.Dispose();
             reader.Close();
         }
         private int recupt_idcreateur()
@@ -99,7 +99,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
