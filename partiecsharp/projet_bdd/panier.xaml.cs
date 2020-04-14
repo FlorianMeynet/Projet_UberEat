@@ -36,20 +36,27 @@ namespace projet_bdd
                 return;
             }
             List<int> liste = Panier.listIdRecette;
-
-            foreach (int id in liste)
+            if (liste == null) 
+            { 
+                Recette.Items.Add("Panier vide");
+            }
+            else
             {
-                string requete_recette = "SELECT Nom , prix  FROM Recette WHERE idRecette=" + id.ToString() + ";";
-                MySqlCommand command_recette = maConnexion.CreateCommand();
-                command_recette.CommandText = requete_recette;
-                MySqlDataReader reader_recette = command_recette.ExecuteReader();
-                command_recette.Dispose();
+                foreach (int id in liste)
+                {
+                    string requete_recette = "SELECT Nom , prix  FROM Recette WHERE idRecette=" + id.ToString() + ";";
+                    MySqlCommand command_recette = maConnexion.CreateCommand();
+                    command_recette.CommandText = requete_recette;
+                    MySqlDataReader reader_recette = command_recette.ExecuteReader();
+                    command_recette.Dispose();
 
-                Recette.Items.Add(reader_recette.GetValue(0).ToString());
-                Prix.Items.Add(reader_recette.GetValue(1).ToString() + "₭");
-                prix_tot.Text = (int.Parse(prix_tot.Text) + int.Parse(reader_recette.GetValue(1).ToString())).ToString();  //A verifier si ca marche
+                    Recette.Items.Add(reader_recette.GetValue(0).ToString());
+                    Prix.Items.Add(reader_recette.GetValue(1).ToString() + "₭");
+                    prix_tot.Text = (int.Parse(prix_tot.Text) + int.Parse(reader_recette.GetValue(1).ToString())).ToString();  //A verifier si ca marche
+                }
             }
         }
+            
 
         private void Retour(object sender, RoutedEventArgs e)
         {

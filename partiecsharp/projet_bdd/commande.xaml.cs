@@ -34,7 +34,6 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return;
             }
-
             
             string requete_entree = "Select Nom from Recette where categorie='Entrée';";   
             MySqlCommand command1 = maConnexion.CreateCommand();
@@ -48,12 +47,10 @@ namespace projet_bdd
             command1.Dispose();
             reader1.Close();
 
-
             string requete_plat = "Select Nom from Recette where categorie='Plat';";
             MySqlCommand command2 = maConnexion.CreateCommand();
             command2.CommandText = requete_plat;
             MySqlDataReader reader2 = command2.ExecuteReader();
-            
 
             while (reader2.Read())
             {
@@ -66,7 +63,6 @@ namespace projet_bdd
             MySqlCommand command3 = maConnexion.CreateCommand();
             command3.CommandText = requete_dessert;
             MySqlDataReader reader3 = command3.ExecuteReader();
-            
 
             while (reader3.Read())
             {
@@ -74,11 +70,8 @@ namespace projet_bdd
             }
             command3.Dispose();
             reader3.Close();
-
-            pseudo.Text = ClientStatic.mail;
-            Credit.Text = ClientStatic.capitalCooks.ToString();
-
-            maConnexion.Close();
+            pseudo.Content = ClientStatic.mail;
+            Credit.Content = ClientStatic.capitalCooks.ToString();
         }
 
         private void retour(object sender, RoutedEventArgs e)

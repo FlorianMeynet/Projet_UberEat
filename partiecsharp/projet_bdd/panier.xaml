@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="panier" Height="350" Width="400">
+        Title="panier" Height="350" Width="700">
     <Grid Background="#FFEEF9E8">
         <Label Content="Panier :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -17,13 +17,12 @@
                 <Label Content="Total :" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" />
                 <TextBlock Name="prix_tot" Width="40"/>
             </StackPanel>
-            
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
-        <Button Content="Valider le Panier" Click="valider_panier"  Margin="10"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
-        <Button VerticalAlignment="Center" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10" >
-                <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\croix.png" />
-            </Button>
-</StackPanel>
+            <Button Content="Valider le Panier" Click="valider_panier"  Margin="10"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
+        </StackPanel>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10"  >
+            <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\croix.png" Width="20" />
+        </Button>
     </Grid>
 </Window>

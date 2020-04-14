@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="Acceuil">
-    <Grid>
+    <Grid Background="#FFEEF9E8">
 
-        <StackPanel Background="#FFEEF9E8" VerticalAlignment="Center" Height="444" HorizontalAlignment="Center">
+        <StackPanel  VerticalAlignment="Center" Height="444" HorizontalAlignment="Center">
             <Label Content="L'objet de votre venue ici"  Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold" Margin="10"/>
         
             <Button Content="Commander un plat" Margin="40" Click="commande" Height="91"  Width="386"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />

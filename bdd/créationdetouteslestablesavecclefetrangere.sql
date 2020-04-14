@@ -134,7 +134,7 @@ INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES (
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Spaghetti','kg',0.90);
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Carotte','kg',2.10);
 
-INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (1,5,50,4,1);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (1,5,50,20,1);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (2,2,10,3,3);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (3,2,10,5,3);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (4,2,10,4,4);

@@ -8,12 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "projet_bdd/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
-          "MySql.Data": "8.0.19.0",
-          "Interop.SSCE": "3.5.0.0"
-=======
           "MySql.Data": "8.0.19"
->>>>>>> a7a9e678870ba80b828e53ce19b577041c2efba5
         },
         "runtime": {
           "projet_bdd.dll": {}
@@ -940,14 +935,6 @@
             "fileVersion": "1.0.24212.1"
           }
         }
-      },
-      "Interop.SSCE/3.5.0.0": {
-        "runtime": {
-          "Interop.SSCE.dll": {
-            "assemblyVersion": "3.5.0.0",
-            "fileVersion": "3.5.0.0"
-          }
-        }
       }
     }
   },
@@ -957,17 +944,6 @@
       "serviceable": false,
       "sha512": ""
     },
-<<<<<<< HEAD
-    "MySql.Data/8.0.19.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Interop.SSCE/3.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-=======
     "BouncyCastle.NetCore/1.8.3": {
       "type": "package",
       "serviceable": true,
@@ -1639,7 +1615,6 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
->>>>>>> a7a9e678870ba80b828e53ce19b577041c2efba5
     }
   }
 }
