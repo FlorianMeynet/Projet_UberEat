@@ -7,12 +7,6 @@
         mc:Ignorable="d"
         Title="Acceuil">
     <Grid>
-<<<<<<< HEAD
-=======
-        <StackPanel Background="#FFEEF9E8" VerticalAlignment="Top">
-            <Label Content="L'objet de votre venue ici"  Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold" Margin="20"/>
-            <Button Content="Commander un plat" Margin="40" Click="commande" Height="91"  VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
->>>>>>> a7a9e678870ba80b828e53ce19b577041c2efba5
 
         <StackPanel Background="#FFEEF9E8" VerticalAlignment="Center" Height="444" HorizontalAlignment="Center">
             <Label Content="L'objet de votre venue ici"  Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold" Margin="10"/>
@@ -21,11 +15,10 @@
 
             <Button Content="Créer un plat" Click="cree_plat" Height="76" Margin="20" VerticalAlignment="Top" Width="386" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
         </StackPanel>
-<<<<<<< HEAD
+
         <Button Content="Retour" Click="retour" HorizontalAlignment="Center" Height="28" Margin="10" VerticalAlignment="Bottom" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
 
 
-=======
->>>>>>> a7a9e678870ba80b828e53ce19b577041c2efba5
+
     </Grid>
 </Window>
