@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="erreur_mail" Height="300" Width="400">
-    <StackPanel Background="#FFEEF9E8">
+    <Grid Background="#FFEEF9E8">
         
         <Label Content="ERREUR " HorizontalAlignment="Center" Margin="20" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontStyle="Italic" />
-        <Label Content="Adresse Mail, deja associée à un compte" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red"/>
-        <Button Content="Ok" Click="ok" HorizontalAlignment="Center" Height="64" Margin="50" VerticalAlignment="Bottom" Width="96" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
-    </StackPanel>
+        <Label Content="Adresse Mail, deja associée à un compte" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="{x:Null}" Foreground="Red"/>
+        <Button Content="Ok" Click="ok" HorizontalAlignment="Center" Height="64" Margin="50" VerticalAlignment="Center" Width="96" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
+    </Grid>
 </Window>

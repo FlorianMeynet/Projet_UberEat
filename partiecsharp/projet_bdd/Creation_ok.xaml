@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="Creation_ok" Height="450" Width="800">
-    <StackPanel Background="#FFEEF9E8" HorizontalAlignment="Center">
+    <Grid Background="#FFEEF9E8" >
         <Image HorizontalAlignment="Center" Height="247" Margin="0,51,0,0" VerticalAlignment="Top" Width="398" Source="giphy.gif"/>
         <Button Content="Ok" Click="ok" Margin="50" VerticalAlignment="Bottom" Width="96" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
 
-    </StackPanel>
+    </Grid>
 </Window>

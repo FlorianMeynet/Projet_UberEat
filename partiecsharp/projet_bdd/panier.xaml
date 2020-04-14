@@ -7,21 +7,23 @@
         mc:Ignorable="d"
         Title="panier" Height="350" Width="400">
     <Grid Background="#FFEEF9E8">
-        <Label Content="PANIER :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
+        <Label Content="Panier :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" >
                 <ListBox Name="Recette"  Height="120" Width="200"  Background="#FFEEF9E8"/>
                 <ListBox Name="Prix"   Width="40"  Background="#FFEEF9E8"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Label Content="Totale :" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" />
+                <Label Content="Total :" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" />
                 <TextBlock Name="prix_tot" Width="40"/>
             </StackPanel>
-            <Button Content="Valider le Panier" Click="valider_panier"  Margin="40"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
+            
         </StackPanel>
-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" >
-            <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\croix.png" Width="25"/>
-        </Button>
-
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
+        <Button Content="Valider le Panier" Click="valider_panier"  Margin="10"   Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
+        <Button VerticalAlignment="Center" Click="Retour" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10" >
+                <Image Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\croix.png" />
+            </Button>
+</StackPanel>
     </Grid>
 </Window>

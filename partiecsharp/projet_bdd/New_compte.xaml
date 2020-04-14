@@ -7,43 +7,48 @@
         mc:Ignorable="d"
         Title="New_compte" Height="450" Width="800">
 
-    <Grid Background="#FFEEF9E8">
+    <Grid Background="#FFEEF9E8" >
 
-        <Grid HorizontalAlignment="Center" Height="414" Margin="27,0,0,0" VerticalAlignment="Center" Width="731">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="233*"/>
-                <RowDefinition Height="181*"/>
-            </Grid.RowDefinitions>
-
-            <Button Content="Créer" Click="creation" HorizontalAlignment="Left" Height="52" Margin="440,29,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" Grid.Row="1" />
-            <TextBox Name="nom" HorizontalAlignment="Left" Margin="49,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Background="#FFCFC1C1" />
-            <TextBox Name="prenom" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,124,0,0" Background="#FFCFC1C1"/>
-            <Label  Content="Mail :" HorizontalAlignment="Left" Margin="459,70,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="459,132,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <TextBox Name="adresse" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="49,190,0,0" Background="#FFCFC1C1"/>
-            <TextBox Name="email" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,105,0,0" Background="#FFCFC1C1"/>
-            <TextBox Name="mdp" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="459,167,0,0" Background="#FFCFC1C1"/>
-            <Label Content="Nom :" HorizontalAlignment="Left" Margin="49,40,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <Label Content="Prénom :" HorizontalAlignment="Left" Margin="49,94,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <Label Content="Adresse :" HorizontalAlignment="Left" Margin="49,163,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
-            <TextBox Name="ville" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="49,0,0,153" Grid.Row="1" Background="#FFCFC1C1"/>
-            <Label Content="Ville :" HorizontalAlignment="Left" Margin="49,213,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.RowSpan="2"/>
-            <DatePicker Name="date" HorizontalAlignment="Left" Margin="49,63,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="28" Width="174">
-                <DatePicker.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </DatePicker.RenderTransform>
-            </DatePicker>
-            <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="49,41,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
-            <TextBox Name="tel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="49,0,0,35" Grid.Row="1" Background="#FFCFC1C1"/>
-            <Label Content="Telephone :" HorizontalAlignment="Left" Margin="49,96,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
-            <CheckBox Name="createur" Content="Créateur" HorizontalAlignment="Left" Margin="459,207,0,0" VerticalAlignment="Top"/>
-        </Grid>
         <Label Content="Création d'un compte :" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="42" Width="216" Foreground="Black" FontSize="20"/>
         <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
+        <Button Content="Créer" Click="creation" HorizontalAlignment="Right" Height="52" Margin="10" VerticalAlignment="Bottom" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" Grid.Row="1" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel Margin="10">
+                <Label Content="Nom :" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
+                <TextBox Name="nom" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Background="#FFCFC1C1" />
+                <Label Content="Prénom :" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
+                <TextBox Name="prenom" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="10" Background="#FFCFC1C1"/>
+                <Label Content="Adresse :" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black"/>
+                <TextBox Name="adresse" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" Margin="10" Background="#FFCFC1C1"/>
+                <Label Content="Ville :" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.RowSpan="2"/>
+                <TextBox Name="ville" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="192" Height="18" Margin="10" Grid.Row="1" Background="#FFCFC1C1"/>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
+                <DatePicker Name="date" HorizontalAlignment="Left" Margin="10" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="28" Width="174">
+                    <DatePicker.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </DatePicker.RenderTransform>
+                </DatePicker>
+                <CheckBox Name="createur" Content="Créateur"  Margin="10" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
+                <Label  Content="Mail :"  Margin="5"  Height="30" Width="127" Foreground="Black"/>
+                <TextBox Name="email"  TextWrapping="Wrap"  Width="192" Height="18" Margin="10" Background="#FFCFC1C1"/>
+                <Label Content="Mot de passe :"  Margin="5"  Height="30" Width="127" Foreground="Black"/>
+                <TextBox Name="mdp"  TextWrapping="Wrap"  Width="192" Height="18" Margin="10" Background="#FFCFC1C1"/>
+                <Label Content="Telephone :"  Margin="5"  Height="30" Width="127" Foreground="Black" Grid.Row="1"/>
+                <TextBox Name="tel"  TextWrapping="Wrap"  Width="192" Height="18" Margin="10" Grid.Row="1" Background="#FFCFC1C1"/>
+                
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 

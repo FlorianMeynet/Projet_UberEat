@@ -8,9 +8,9 @@
         Title="CreationRecette" Height="450" Width="800">
     <Grid Background="#FFEEF9E8">
         <StackPanel Orientation="Vertical">
-            <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center"/>
+            <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Grid>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50,10">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,10">
                     <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
 
@@ -22,9 +22,9 @@
                         <CheckBox Name="dessert" Content="Dessert" Margin="10"/>
                     </StackPanel>
                     <Label Content="Ne pas cocher plusieurs catégories" HorizontalAlignment="Center" FontWeight="Normal" FontStyle="Italic" Background="{x:Null}" Foreground="Red"/>
-
                 </StackPanel>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="0,10">
+                
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,10">
                     <Label Content="Prix de la recette :" Margin="10" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Bold"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBox x:Name="prix" Margin="10" Width="40" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>

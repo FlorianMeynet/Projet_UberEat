@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="Acceuil">
-    <StackPanel>
-        <StackPanel Background="#FFEEF9E8" VerticalAlignment="Top">
-            <Label Content="L'objet de votre venue ici"  Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold" Margin="20"/>
-            <Button Content="Commander un plat" Margin="40" Click="commande" Height="91"  VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
+    <Grid>
 
-            <Button Content="Créer un plat" Click="cree_plat" Height="76" Margin="50" VerticalAlignment="Top" Width="386" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
-            <Button Content="Retour" Click="retour" HorizontalAlignment="Center" Height="28" Margin="5" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
+        <StackPanel Background="#FFEEF9E8" VerticalAlignment="Center" Height="444" HorizontalAlignment="Center">
+            <Label Content="L'objet de votre venue ici"  Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold" Margin="10"/>
+        
+            <Button Content="Commander un plat" Margin="40" Click="commande" Height="91"  Width="386"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
 
+            <Button Content="Créer un plat" Click="cree_plat" Height="76" Margin="20" VerticalAlignment="Top" Width="386" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
         </StackPanel>
-    </StackPanel>
+        <Button Content="Retour" Click="retour" HorizontalAlignment="Center" Height="28" Margin="10" VerticalAlignment="Bottom" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
+
+
+    </Grid>
 </Window>
