@@ -161,11 +161,11 @@ C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabili
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\New_compte.baml
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\panier.baml
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.g.resources
-C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CoreCompileInputs.cache
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.AssemblyInfoInputs.cache
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.AssemblyInfo.cs
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CopyComplete
 C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\projet_bdd.exe
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\projet_bdd.deps.json
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\projet_bdd.runtimeconfig.json
@@ -192,3 +192,12 @@ C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\obj\D
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.AssemblyInfo.cs
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CopyComplete
 C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.genruntimeconfig.cache
+=======
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\projet_bdd.csproj.CoreCompileInputs.cache
+>>>>>>> a7a9e678870ba80b828e53ce19b577041c2efba5

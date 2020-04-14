@@ -25,7 +25,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -35,8 +35,9 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return;
             }
+            List<int> liste = Panier.listIdRecette;
 
-            foreach(int id in Panier.listIdRecette)
+            foreach (int id in liste)
             {
                 string requete_recette = "SELECT Nom , prix  FROM Recette WHERE idRecette=" + id.ToString() + ";";
                 MySqlCommand command_recette = maConnexion.CreateCommand();
@@ -60,7 +61,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -93,7 +94,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
@@ -118,7 +119,7 @@ namespace projet_bdd
                 string[] i = ingre.Split(":");  // i[0] : ingredient
                 string[] new_i = i[1].Split("-");  // new_i[0] : quantité   new_i[1]: unité
 
-                string requete_select_id = "Select idIngredient from Ingredient where Nom=" + i[0] + ";";
+                string requete_select_id = "Select idIngredient from Ingredient where Nom='" + i[0] + "';";
                 MySqlCommand command_id = maConnexion.CreateCommand();
                 command_id.CommandText = requete_select_id;
                 MySqlDataReader reader_id = command_id.ExecuteReader();
@@ -133,7 +134,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=password_login;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
 
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();

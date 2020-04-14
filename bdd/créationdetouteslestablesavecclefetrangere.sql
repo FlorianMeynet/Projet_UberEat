@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2020-04-07 17:45
+-- Generated: 2020-04-14 15:38
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -31,12 +31,13 @@ CREATE TABLE IF NOT EXISTS `TableProjet`.`Recette` (
   `Nom` VARCHAR(20) NULL DEFAULT NULL,
   `descriptif` VARCHAR(150) NULL DEFAULT '\"C\'est très bon\"',
   `prix` FLOAT(11) NOT NULL,
-  `listingredient` VARCHAR(45) NOT NULL,
+  `listingredient` LONGTEXT NOT NULL,
   `idCreateur` INT(11) NULL DEFAULT NULL,
   `categorie` VARCHAR(45) NULL DEFAULT 'Plat',
   PRIMARY KEY (`idRecette`),
   INDEX `idCreateur_idx` (`idCreateur` ASC) VISIBLE,
   UNIQUE INDEX `idRecette_UNIQUE` (`idRecette` ASC) VISIBLE,
+  UNIQUE INDEX `Nom_UNIQUE` (`Nom` ASC) VISIBLE,
   CONSTRAINT `idCreateur`
     FOREIGN KEY (`idCreateur`)
     REFERENCES `TableProjet`.`Createur` (`idCreateur`)
@@ -86,17 +87,17 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `TableProjet`.`stock` (
   `idstock` INT(11) NOT NULL AUTO_INCREMENT,
-  `idingredient` INT(11) NULL DEFAULT NULL,
+  `idIngredient` INT(11) NULL DEFAULT NULL,
   `quantiteMin` FLOAT(11) NULL DEFAULT NULL,
   `quantiteMax` FLOAT(11) NULL DEFAULT NULL,
   `quantite` FLOAT(11) NULL DEFAULT NULL,
   `idfournisseur` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`idstock`),
-  INDEX `idIngredient_idx` (`idingredient` ASC) VISIBLE,
+  INDEX `idIngredient_idx` (`idIngredient` ASC) VISIBLE,
   INDEX `idFournisseur_idx` (`idfournisseur` ASC) VISIBLE,
   UNIQUE INDEX `idstock_UNIQUE` (`idstock` ASC) VISIBLE,
   CONSTRAINT `idIngredient`
-    FOREIGN KEY (`idingredient`)
+    FOREIGN KEY (`idIngredient`)
     REFERENCES `TableProjet`.`Ingredient` (`idIngredient`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -113,13 +114,14 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Claude','Jean','rue de la paie','bourg','1957-11-24',0674586954,'jean.claude@orange.fr',0,0,'1234');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Morin','Loic','rue du tarpin','marseille','1999-04-18',0685314692,'morin.loic@gmail.fr',0,10000,'caca');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Meynet','Florian','rue de la boulangerie','perrognier','1998-02-17',067458365,'meynet.florian@orange.fr',0,10000,'mdpfacile');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Admin','Admin','ESILV','PARIS','0000-00-00',0000,'admin',1,1000000,'mdpfacile');
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de marseille',2);
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de haute savoie',3);
+INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Admin',4);
+
 
 INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0682197635,'France boisson');
 INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0785314587,'Les produits laitiers');
@@ -138,5 +140,5 @@ INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`q
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (4,2,10,4,4);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (5,4,20,6,3);
 
-INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'poulet/salade/pain/mayonaise/huile',2);
+INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'poulet:75-gr/salade:10-gr/pain:1-u/mayonaise:2-gr/huile:0.02-l',2);
 

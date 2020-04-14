@@ -39,7 +39,9 @@ namespace projet_bdd
 
         private void cree_plat(object sender, RoutedEventArgs e)
         {
-
+            CreationRecette a = new CreationRecette();
+            a.Show();
+            this.Close();
 
         }
     }

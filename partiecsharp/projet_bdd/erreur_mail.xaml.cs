@@ -21,7 +21,6 @@ namespace projet_bdd
         {
             InitializeComponent();
         }
-
         private void ok(object sender, RoutedEventArgs e)
         {
             this.Close();
