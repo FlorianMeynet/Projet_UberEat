@@ -14,11 +14,11 @@ namespace projet_bdd
         public static DateTime? d_naissance;
         public static long tel;
         public static string mail;
-        public static bool estCreateur;
+        public static int estCreateur;
         public static int capitalCooks;
         public static string mdp;
         public static int idCreateur;
-        static public void ClientStatic1(int i=0, string n=null, string p=null, string a=null, string v=null, DateTime? d=null, long t=0, string m=null, bool e=false, int c=0, string mdp=null,int idcreateur=0)
+        static public void ClientStatic1(int i=0, string n=null, string p=null, string a=null, string v=null, DateTime? d=null, long t=0, string m=null, int e=0, int c=0, string mdp=null,int idcreateur=0)
         {
         ClientStatic.idClient = i;
         ClientStatic.nom = n;

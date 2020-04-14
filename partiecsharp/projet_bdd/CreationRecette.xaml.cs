@@ -64,7 +64,7 @@ namespace projet_bdd
                 cat =  "Dessert";
             }
 
-            string requete = "Select Nom from Recette where categorie="+cat+";";   //On verifie que le nom de la recette n'existe pas deja
+            string requete = "Select Nom from Recette where categorie='"+cat+"';";   //On verifie que le nom de la recette n'existe pas deja
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 

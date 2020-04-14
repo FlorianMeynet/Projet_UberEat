@@ -118,7 +118,7 @@ namespace projet_bdd
                 string[] i = ingre.Split(":");  // i[0] : ingredient
                 string[] new_i = i[1].Split("-");  // new_i[0] : quantité   new_i[1]: unité
 
-                string requete_select_id = "Select idIngredient from Ingredient where Nom=" + i[0] + ";";
+                string requete_select_id = "Select idIngredient from Ingredient where Nom='" + i[0] + "';";
                 MySqlCommand command_id = maConnexion.CreateCommand();
                 command_id.CommandText = requete_select_id;
                 MySqlDataReader reader_id = command_id.ExecuteReader();
