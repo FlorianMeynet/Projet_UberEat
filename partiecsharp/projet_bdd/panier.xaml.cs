@@ -35,8 +35,9 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return;
             }
+            List<int> liste = Panier.listIdRecette;
 
-            foreach(int id in Panier.listIdRecette)
+            foreach (int id in liste)
             {
                 string requete_recette = "SELECT Nom , prix  FROM Recette WHERE idRecette=" + id.ToString() + ";";
                 MySqlCommand command_recette = maConnexion.CreateCommand();

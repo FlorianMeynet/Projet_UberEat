@@ -67,6 +67,8 @@ namespace projet_bdd
                 ClientStatic.estCreateur = int.Parse(reader["estCreateur"].ToString());
                 ClientStatic.capitalCooks = int.Parse(reader["capitalCooks"].ToString());
                 ClientStatic.mdp = reader["motDePasse"].ToString();
+                command_all.Dispose();
+                reader.Close();
 
                 if (ClientStatic.estCreateur == 1)
                 {
@@ -88,8 +90,7 @@ namespace projet_bdd
                 erreur_connexion a = new erreur_connexion();
                 a.Show();
             }
-            command_all.Dispose();
-            reader.Close();
+            
         }
         private int recupt_idcreateur()
         {
@@ -107,18 +108,21 @@ namespace projet_bdd
                 return(0);
             }
             
-            string requete = "SELECT idCreateur FROM createur c natural join client cl where idClient='"+ClientStatic.idClient + "';";
-            MySqlCommand command1 = maConnexion.CreateCommand();
-            command1.CommandText = requete;
+            string requete_idcreateur = "SELECT distinct idCreateur FROM createur c natural join client cl where idClient="+ ClientStatic.idClient + ";";
+            MySqlCommand command_idcreateur = maConnexion.CreateCommand();
+            command_idcreateur.CommandText = requete_idcreateur;
 
-            MySqlDataReader reader = command1.ExecuteReader();  //reader a les valeurs retourner par la requette
-            command1.Dispose();
-            reader.Read();
-            int a =int.Parse(reader["idClient"].ToString());
-            command1.Dispose();
-            reader.Close();
+            MySqlDataReader reader = command_idcreateur.ExecuteReader();  //reader a les valeurs retourner par la requette
+
+            int a = 0;
+            if(reader.HasRows)
+            {
+                reader.Read();
+                a = int.Parse(reader.GetValue(0).ToString());
+            }
 
             return (a);
+
 
         }
         private void notyet(object sender, RoutedEventArgs e)

@@ -25,7 +25,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=mdp;";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -77,6 +77,8 @@ namespace projet_bdd
 
             pseudo.Text = ClientStatic.mail;
             Credit.Text = ClientStatic.capitalCooks.ToString();
+
+            maConnexion.Close();
         }
 
         private void retour(object sender, RoutedEventArgs e)
@@ -126,13 +128,14 @@ namespace projet_bdd
                 Console.WriteLine("erreur rien n'est choisi");
                 erreur pb = new erreur();
                 pb.Show();
+                return;
             }
 
 
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=mdp;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -146,14 +149,20 @@ namespace projet_bdd
             command_list.CommandText = requete_list_ingre;
             
             MySqlDataReader reader_list = command_list.ExecuteReader();
-            command_list.Dispose();
-            string list_ingredient = reader_list.GetValue(1).ToString();
-            int id = int.Parse(reader_list.GetValue(0).ToString());
-            if (Estenstock(list_ingredient))
+
+
+            if (reader_list.HasRows)
             {
-                Panier.listIdRecette.Add(id);  //Ajouter dans le panier
-                //Gerer le fait que on enleve du stock ici ou seulement lors de la commande
+                reader_list.Read();
+                string list_ingredient = reader_list.GetValue(1).ToString();
+                int id = int.Parse(reader_list.GetValue(0).ToString());
+                if (Estenstock(list_ingredient))
+                {
+                    Panier.listIdRecette.Add(id);  //Ajouter dans le panier
+                                                   //Gerer le fait que on enleve du stock ici ou seulement lors de la commande
+                }
             }
+            command_list.Dispose();
         }
         private bool Estenstock(string nom_plat)
         {
@@ -174,7 +183,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=mdp;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
