@@ -67,6 +67,8 @@ namespace projet_bdd
                 ClientStatic.estCreateur = int.Parse(reader["estCreateur"].ToString());
                 ClientStatic.capitalCooks = int.Parse(reader["capitalCooks"].ToString());
                 ClientStatic.mdp = reader["motDePasse"].ToString();
+                string affichage_client = ClientStatic.affichage();
+                MessageBox.Show(affichage_client);
                 command_all.Dispose();
                 reader.Close();
 
@@ -120,11 +122,9 @@ namespace projet_bdd
                 reader.Read();
                 a = int.Parse(reader.GetValue(0).ToString());
             }
-
             return (a);
-
-
         }
+
         private void notyet(object sender, RoutedEventArgs e)
         {
             New_compte page = new New_compte();

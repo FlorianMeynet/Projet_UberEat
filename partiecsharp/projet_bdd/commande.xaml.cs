@@ -21,6 +21,8 @@ namespace projet_bdd
         public Commande()
         {
             InitializeComponent();
+            pseudo.Content = ClientStatic.mail;
+            Credit.Content = ClientStatic.capitalCooks.ToString();
 
             MySqlConnection maConnexion = null;
             try
@@ -70,8 +72,7 @@ namespace projet_bdd
             }
             command3.Dispose();
             reader3.Close();
-            pseudo.Content = ClientStatic.mail;
-            Credit.Content = ClientStatic.capitalCooks.ToString();
+            
         }
 
         private void retour(object sender, RoutedEventArgs e)

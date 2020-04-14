@@ -33,6 +33,10 @@ namespace projet_bdd
         ClientStatic.mdp = mdp;
         ClientStatic.idCreateur = idcreateur;
         }
+        static public string affichage()
+        {
+            return (ClientStatic.idClient.ToString() + " " + ClientStatic.nom + " " + ClientStatic.prenom + " "+ ClientStatic.prenom + " "+ ClientStatic.adresse + " "+ ClientStatic.ville + " "+ ClientStatic.d_naissance.ToString() + " "+ ClientStatic.tel.ToString() + " "+ ClientStatic.mail + " "+ ClientStatic.estCreateur.ToString() + " "+ ClientStatic.capitalCooks.ToString() + " " + ClientStatic.mdp);
+        }
 
     }
 }

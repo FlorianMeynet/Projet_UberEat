@@ -12,12 +12,12 @@
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
                 <Label Content="Pseudo :" HorizontalAlignment="Center"  FontWeight="Bold" />
-                <Label Name="pseudo" Margin="10" Height="18" Background="#FFE0D8D8" Width="80" BorderBrush="{x:Null}" />
+                <Label Name="pseudo" Margin="10" FontWeight="Bold"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="5">
                 <Label Content="Credit :" HorizontalAlignment="Center"  FontWeight="Bold" />
-                <Label Name="Credit" Margin="10" Background="#FFE0D8D8" Width="60" BorderBrush="{x:Null}"/>
+                <Label Name="Credit"  Margin="10" FontWeight="Bold"/>
             </StackPanel>
 
             <Button HorizontalAlignment="Left" Click="afficher_panier" FontFamily="Segoe UI Black" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Margin="15" >
