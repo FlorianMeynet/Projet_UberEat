@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Creation_ok" Height="450" Width="800">
     <Grid Background="#FFEEF9E8" >
-        <Image HorizontalAlignment="Center" Height="247" Margin="0,51,0,0" VerticalAlignment="Top" Width="398" Source="giphy.gif"/>
+        <Image HorizontalAlignment="Center" Height="247" Margin="0,51,0,0" VerticalAlignment="Top" Width="398" Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\giphy.gif"/>
         <Button Content="Ok" Click="ok" Margin="50" VerticalAlignment="Bottom" Width="96" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
 
     </Grid>

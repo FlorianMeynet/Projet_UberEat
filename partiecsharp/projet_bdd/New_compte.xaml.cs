@@ -38,13 +38,12 @@ namespace projet_bdd
                 return;
             }
 
-            string requete = "Select email from client;";
+            string requete = "Select adresseEmail from client;";
 
             MySqlCommand command1 = maConnexion.CreateCommand();
             command1.CommandText = requete;
 
             MySqlDataReader reader = command1.ExecuteReader();
-            command1.Dispose();
             bool existe = false;
             while (reader.Read())   
             {   
@@ -54,22 +53,26 @@ namespace projet_bdd
                     erreur_mail pa = new erreur_mail();
                     pa.Show();
                     existe = false;
+                    return;
                 }
-                
             }
+            command1.Dispose();
+
             if (existe == false)
             {
-                Creation_ok a = new Creation_ok();
-                a.Show();
-                this.Close();
+                
                 string name = nom.Text;
                 string pre = prenom.Text;
                 string adr = adresse.Text;
                 string v = ville.Text;
                 DateTime? d = date.SelectedDate;
+                string date_nai = d.Value.Year.ToString() +"-" + d.Value.Day.ToString() + "-" + d.Value.Month.ToString(); //Gerer le faite que c'est year-day-month 
+                
+                MessageBox.Show(date_nai);
                 string t = tel.Text;
                 bool? estcreateur = createur.IsChecked;
                 bool estcreateur1 = true;
+
                 if (estcreateur==false || estcreateur == null)
                 {
                     estcreateur1 = false;
@@ -78,23 +81,20 @@ namespace projet_bdd
                 string p = email.Text;
                 string m = mdp.Text;
 
-
-                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values (" + name + "," + pre + "," + adr + "," + v + "," + d + "," + t + "," + p + "," + estcreateur1.ToString() + "," + "0" + "," + m+");";
+                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values ('" + name + "','" + pre + "','" + adr + "','" + v + "'," + date_nai + "," + t + ",'" + p + "'," + estcreateur1.ToString() + "," + "0" + ",'" + m+"');";
                 MySqlCommand command3 = maConnexion.CreateCommand();
                 command3.CommandText = insertTable;
-                try
-                {
-                    command3.ExecuteNonQuery();
-                }
-                catch (MySqlException er)
-                {
-                    Console.WriteLine(" ErreurConnexion : " + er.ToString());
-                    Console.ReadLine();
-                    return;
-                }
+                MessageBox.Show(insertTable);
 
+                MySqlDataReader reader3 = command3.ExecuteReader();
+
+                command3.Dispose();
+                MessageBox.Show("Merci pour la creation de la recette");
+                
+                Creation_ok a = new Creation_ok();
+                a.Show();
+                this.Close();
             }
-            
         }
 
         private void retour(object sender, RoutedEventArgs e)
@@ -103,7 +103,5 @@ namespace projet_bdd
             a.Show();
             this.Close();
         }
-
-        
     }
 }
