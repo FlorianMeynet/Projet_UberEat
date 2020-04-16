@@ -118,6 +118,7 @@ INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naiss
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Morin','Loic','rue du tarpin','marseille','1999-04-18',0685314692,'morin.loic@gmail.fr',0,10000,'caca');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Meynet','Florian','rue de la boulangerie','perrognier','1998-02-17',067458365,'meynet.florian@orange.fr',0,10000,'mdpfacile');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Admin','Admin','ESILV','PARIS','0000-00-00',0000,'admin',1,1000000,'mdpfacile');
+
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de marseille',2);
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de haute savoie',3);
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Admin',4);
@@ -127,18 +128,48 @@ INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0682197635,'
 INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0785314587,'Les produits laitiers');
 INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0647365218,'Carrefour');
 INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0725361426,'Intermarché');
+INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0725381426,'Alimentation');
+INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0725369426,'Franprix');
+INSERT INTO `tableprojet`.`fournisseur` (`telephone`,`Nom`) VALUES (0725369726,'Primeur');
+
+
 
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Biere','u',2);
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Thai','kg',2.74);
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Long','kg',1.99);
 INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Spaghetti','kg',0.90);
-INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Carotte','kg',2.10);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Oeufs','u',2);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Farine','kg',2.10);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Sucre','kg',4);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Caviar','kg',50);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Piment','kg',5);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Poivrons','u',3);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Oignons','kg',1.5);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Poulet','kg',12);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Salade','kg',14);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Huile','L',12);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Pain','u',0.8);
+INSERT INTO `tableprojet`.`ingredient` (`Nom`,`categorie`,`prixUnité`) VALUES ('Mayonnaise','L',8);
 
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (1,5,50,20,1);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (2,2,10,3,3);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (3,2,10,5,3);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (4,2,10,4,4);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (5,4,20,6,3);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (6,4,20,6,3);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (7,3,20,6,5);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (8,2,20,6,3);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (9,1,20,6,4);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (10,1,20,6,5);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (11,1,20,6,2);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (12,3,20,6,5);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (13,2,20,6,3);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (14,1,20,6,2);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (15,1,20,6,6);
+INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (16,1,20,6,7);
 
-INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'poulet:75-gr/salade:10-gr/pain:1-u/mayonaise:2-gr/huile:0.02-l',2);
+INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'Poulet:0.075-gr/Salade:10-gr/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',2);
+INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Poivron-sandwich','Un poivron et un sandwich',1000,'Poivron:1-u/Pain:1-u',3);
+INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Carbonate Flammande','Plat typique belge',30,'Poulet:0.075-gr/Salade:10-gr/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',1);
+
 

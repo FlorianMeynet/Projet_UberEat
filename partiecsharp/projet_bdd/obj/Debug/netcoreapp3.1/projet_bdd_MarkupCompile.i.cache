@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\
+C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\obj\Debug\netcoreapp3.1\
 projet_bdd
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\App.xaml
+C:\Users\asus\Desktop\Projet github\Projet_UberEat\partiecsharp\projet_bdd\App.xaml
 11-1793764451
 
-17-21664947
-2061048920858
+1787278539
+207-1480051312
 Acceuil.xaml;Acceuil_commande.xaml;commande.xaml;CreationRecette.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;erreur_mail.xaml;MainWindow.xaml;New_compte.xaml;panier.xaml;
 
-True
+False
 

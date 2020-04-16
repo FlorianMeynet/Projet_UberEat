@@ -133,10 +133,10 @@ namespace projet_bdd
                 command_id.Dispose();
                 int id_in = int.Parse(reader_id.GetValue(0).ToString());
 
-                Enelver_quantite(id_in, int.Parse(new_i[0]));  //On enleve la quantié pour chaque ingredient de la recette
+                Enlever_quantite(id_in, int.Parse(new_i[0]));  //On enleve la quantié pour chaque ingredient de la recette
             }
         }
-        public void Enelver_quantite(int ingre,int quantite)
+        public void Enlever_quantite(int ingre,int quantite)
         {
             MySqlConnection maConnexion = null;
             try
