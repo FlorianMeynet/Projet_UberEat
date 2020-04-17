@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
@@ -66,11 +67,19 @@ namespace projet_bdd
             string nom_recette = nomrecette.Text.ToString();  //Nom saisi
             string descriptife = descriptif.Text.ToString();  //Descriptif
             float prixs = float.Parse(prix.Text.ToString());  //Prix
-            string listeingrediente = ""; 
+            string listeingrediente = "";
+            List<string> a = new List<string>();
             foreach (string valeur in listBox1.Items)
             {
-                listeingrediente += valeur + " / ";  //Ajout d'un ingredient dans les listes des ingredients
+                a.Add(valeur);
             }
+            int n = a.Count();
+            for (int k = 0; k < n - 1; k++)
+            {
+                listeingrediente += a[k] + " / "; //Ajout d'un ingredient dans les listes des ingredients
+            }
+            listeingrediente += (" ")+a[n-1];
+
             string cat="";
 
             if (entree.IsChecked == true)
