@@ -44,48 +44,52 @@ namespace projet_bdd
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
                 return;
             }
-
-            string p = mail.Text;
-            string requete = "SELECT * FROM client WHERE client.adresseEmail='"+p+"';";
             
-            MySqlCommand command_all = maConnexion.CreateCommand();
-            command_all.CommandText = requete;
-
-            MySqlDataReader reader = command_all.ExecuteReader();  //reader a les valeurs retourner par la requette
-            reader.Read();
-            if (mdp.Text == reader["motDePasse"].ToString())  //Verification avec le mdp
+            if (mail.Text.Trim() != "" && mdp.Text.Trim() != "")
             {
-                ClientStatic.idClient = int.Parse(reader["idClient"].ToString());
-                ClientStatic.nom = reader["nom"].ToString();
-                ClientStatic.prenom = reader["prenom"].ToString();
-                ClientStatic.adresse = reader["adresse"].ToString();
-                ClientStatic.ville = reader["ville"].ToString();
-                DateTime date = (DateTime)reader["date_naissance"];
-                ClientStatic.d_naissance = date;
-                ClientStatic.tel = int.Parse(reader["numeroDeTelephone"].ToString());
-                ClientStatic.mail = reader["adresseEmail"].ToString();
-                ClientStatic.estCreateur = int.Parse(reader["estCreateur"].ToString());
-                ClientStatic.capitalCooks = int.Parse(reader["capitalCooks"].ToString());
-                ClientStatic.mdp = reader["motDePasse"].ToString();
-                string affichage_client = ClientStatic.affichage();
-                MessageBox.Show(affichage_client);
-                command_all.Dispose();
-                reader.Close();
+                string p = mail.Text;
+                string requete = "SELECT * FROM client WHERE client.adresseEmail='" + p + "';";
 
-                if (ClientStatic.estCreateur == 1)
+                MySqlCommand command_all = maConnexion.CreateCommand();
+                command_all.CommandText = requete;
+
+                MySqlDataReader reader = command_all.ExecuteReader();  //reader a les valeurs retourner par la requette
+                reader.Read();
+
+                if (mdp.Text == reader["motDePasse"].ToString())  //Verification avec le mdp
                 {
-                    ClientStatic.idCreateur = recupt_idcreateur();
-                    Acceuil page = new Acceuil();
-                    page.Show();
-                    this.Close();
+                    ClientStatic.idClient = int.Parse(reader["idClient"].ToString());
+                    ClientStatic.nom = reader["nom"].ToString();
+                    ClientStatic.prenom = reader["prenom"].ToString();
+                    ClientStatic.adresse = reader["adresse"].ToString();
+                    ClientStatic.ville = reader["ville"].ToString();
+                    DateTime date = (DateTime)reader["date_naissance"];
+                    ClientStatic.d_naissance = date;
+                    ClientStatic.tel = int.Parse(reader["numeroDeTelephone"].ToString());
+                    ClientStatic.mail = reader["adresseEmail"].ToString();
+                    ClientStatic.estCreateur = int.Parse(reader["estCreateur"].ToString());
+                    ClientStatic.capitalCooks = int.Parse(reader["capitalCooks"].ToString());
+                    ClientStatic.mdp = reader["motDePasse"].ToString();
+                    string affichage_client = ClientStatic.affichage();
+                    command_all.Dispose();
+                    reader.Close();
+
+                    if (ClientStatic.estCreateur == 1)
+                    {
+                        ClientStatic.idCreateur = recupt_idcreateur();
+                        Acceuil page = new Acceuil();
+                        page.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        Acceuil_commande page = new Acceuil_commande();
+                        page.Show();
+                        this.Close();
+                    }
                 }
-                else
-                {
-                    Acceuil_commande page = new Acceuil_commande();
-                    page.Show();
-                    this.Close();
-                }   
             }
+            
 
             else
             {

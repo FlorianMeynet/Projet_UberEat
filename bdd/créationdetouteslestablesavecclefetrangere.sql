@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2020-04-14 15:38
+-- Generated: 2020-04-17 10:43
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `TableProjet`.`Recette` (
   `Nom` VARCHAR(20) NULL DEFAULT NULL,
   `descriptif` VARCHAR(150) NULL DEFAULT '\"C\'est très bon\"',
   `prix` FLOAT(11) NOT NULL,
-  `listingredient` LONGTEXT NOT NULL,
   `idCreateur` INT(11) NULL DEFAULT NULL,
   `categorie` VARCHAR(45) NULL DEFAULT 'Plat',
   PRIMARY KEY (`idRecette`),
@@ -109,15 +108,80 @@ CREATE TABLE IF NOT EXISTS `TableProjet`.`stock` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+CREATE TABLE IF NOT EXISTS `TableProjet`.`Commande` (
+  `idCommande` INT(11) NOT NULL AUTO_INCREMENT,
+  `idRecette` INT(11) NULL DEFAULT NULL,
+  `idClient` INT(11) NULL DEFAULT NULL,
+  `date_commande` DATETIME NULL DEFAULT NULL,
+  `idCuisinier` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`idCommande`),
+  UNIQUE INDEX `idCommande_UNIQUE` (`idCommande` ASC) VISIBLE,
+  INDEX `idRecette_idx` (`idRecette` ASC) VISIBLE,
+  INDEX `idClient_idx` (`idClient` ASC) VISIBLE,
+  INDEX `idCuisinier_idx` (`idCuisinier` ASC) VISIBLE,
+  CONSTRAINT `idRecette`
+    FOREIGN KEY (`idRecette`)
+    REFERENCES `TableProjet`.`Recette` (`idRecette`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idClient`
+    FOREIGN KEY (`idClient`)
+    REFERENCES `TableProjet`.`Client` (`idClient`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCuisinier`
+    FOREIGN KEY (`idCuisinier`)
+    REFERENCES `TableProjet`.`Cuisinier` (`idCuisinier`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `TableProjet`.`Cuisinier` (
+  `idCuisinier` INT(11) NOT NULL AUTO_INCREMENT,
+  `Nom` VARCHAR(45) NULL DEFAULT NULL,
+  `Prenom` VARCHAR(45) NULL DEFAULT NULL,
+  `Salaire` FLOAT(11) NULL DEFAULT NULL,
+  `nombre_commande` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`idCuisinier`),
+  UNIQUE INDEX `idCuisinier_UNIQUE` (`idCuisinier` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `TableProjet`.`Liste_ingredient` (
+  `idIngredient_recette` VARCHAR(20) NOT NULL,
+  `idRecette1` INT(11) NULL DEFAULT NULL,
+  `IdIngredient1` INT(11) NULL DEFAULT NULL,
+  `quantite` FLOAT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`idIngredient_recette`),
+  INDEX `idRecette_idx` (`idRecette1` ASC) VISIBLE,
+  INDEX `idIngredient_idx` (`IdIngredient1` ASC) VISIBLE,
+  UNIQUE INDEX `idIngredient_recette_UNIQUE` (`idIngredient_recette` ASC) VISIBLE,
+  CONSTRAINT `idRecette1`
+    FOREIGN KEY (`idRecette1`)
+    REFERENCES `TableProjet`.`Recette` (`idRecette`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idIngredient1`
+    FOREIGN KEY (`IdIngredient1`)
+    REFERENCES `TableProjet`.`Ingredient` (`idIngredient`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+
+
+
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Claude','Jean','rue de la paie','bourg','1957-11-24',0674586954,'jean.claude@orange.fr',0,0,'1234');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Morin','Loic','rue du tarpin','marseille','1999-04-18',0685314692,'morin.loic@gmail.fr',0,10000,'caca');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Meynet','Florian','rue de la boulangerie','perrognier','1998-02-17',067458365,'meynet.florian@orange.fr',0,10000,'mdpfacile');
-INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Admin','Admin','ESILV','PARIS','0000-00-00',0000,'admin',1,1000000,'mdpfacile');
+INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Admin','Admin','ESILV','PARIS','1800-01-10',0000,'admin',1,1000000,'admin');
 
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de marseille',2);
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de haute savoie',3);
@@ -168,8 +232,10 @@ INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`q
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (15,1,20,6,6);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (16,1,20,6,7);
 
+/*
 INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'Poulet:0.075-gr/Salade:0.010-kg/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',2);
 INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Poivron-sandwich','Un poivron et un sandwich',4,'Poivron:1-u/Pain:1-u',3);
 INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Carbonate Flammande','Plat typique belge',5.5,'Poulet:0.075-kg/Salade:0.010-kg/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',1);
+*/
 
 

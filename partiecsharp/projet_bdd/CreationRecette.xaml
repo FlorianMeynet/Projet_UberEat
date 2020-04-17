@@ -41,9 +41,12 @@
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="20,0">
+                        <Label HorizontalContentAlignment="Center" Content="Liste d'ingredients choisis :" Margin="10" HorizontalAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,0">
+                            <ListBox Name="listBox1" HorizontalAlignment="Center"  Height="120" Width="200"  Background="#FFEEF9E8" FontSize="11"/>
+                            <Button Content="Supprimer un ingredient" VerticalContentAlignment="Center" Click="supr" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="11" Margin="10" Height="30" />
 
-                        <Label Content="Liste d'ingredients choisis :" Margin="10" HorizontalAlignment="Left" Width="148" FontStyle="Normal" FontWeight="Bold"/>
-                        <ListBox Name="listBox1" HorizontalAlignment="Center"  Height="120" Width="200"  Background="#FFEEF9E8"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

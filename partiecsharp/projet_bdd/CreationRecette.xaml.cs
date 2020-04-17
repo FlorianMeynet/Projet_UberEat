@@ -67,19 +67,7 @@ namespace projet_bdd
             string nom_recette = nomrecette.Text.ToString();  //Nom saisi
             string descriptife = descriptif.Text.ToString();  //Descriptif
             float prixs = float.Parse(prix.Text.ToString());  //Prix
-            string listeingrediente = "";
-            List<string> a = new List<string>();
-            foreach (string valeur in listBox1.Items)
-            {
-                a.Add(valeur);
-            }
-            int n = a.Count();
-            for (int k = 0; k < n - 1; k++)
-            {
-                listeingrediente += a[k] + " / "; //Ajout d'un ingredient dans les listes des ingredients
-            }
-            listeingrediente += (" ")+a[n-1];
-
+            
             string cat="";
 
             if (entree.IsChecked == true)
@@ -114,13 +102,45 @@ namespace projet_bdd
 
             if (existe == false)
             {
-                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`,`categorie`) Values('" +nom_recette + "','" + descriptife + "'," + prixs + ",'" + listeingrediente+"',"+ ClientStatic.idCreateur +",'"+ cat +"');";
+                string requete2 = "insert into tableprojet.recette(`Nom`,`descriptif`,`prix`,`idCreateur`,`categorie`) Values('" +nom_recette + "','" + descriptife + "'," + prixs + "," + ClientStatic.idCreateur +",'"+ cat +"');";
                 MessageBox.Show(requete2);
                 MySqlCommand command2 = maConnexion.CreateCommand();
                 command2.CommandText = requete2;
 
                 MySqlDataReader reader2 = command2.ExecuteReader();
                 command2.Dispose();
+
+                string requete_idRecette = "select idRecette from Recette where Nom = '"+nom_recette+"'; ";
+                MySqlCommand command_idRecette = maConnexion.CreateCommand();
+                command_idRecette.CommandText = requete_idRecette;
+
+                MySqlDataReader reader_idRecette = command_idRecette.ExecuteReader();
+                reader_idRecette.Read();
+                int id_recette = int.Parse(reader_idRecette["idRecette"].ToString());
+                command_idRecette.Dispose();
+
+                foreach (string valeur in listBox1.Items)
+                {
+                    string[] a = valeur.Split(":");
+                    string[] new_a1 = a[1].Split("-");
+                    string requete_idingredient = "select idIngredient from Ingredient where Nom = '" + a[0] + "'; ";
+                    MySqlCommand command_idIngredient = maConnexion.CreateCommand();
+                    command_idIngredient.CommandText = requete_idingredient;
+
+                    MySqlDataReader reader_idIngredient = command_idIngredient.ExecuteReader();
+                    reader_idIngredient.Read();
+                    int id_ingredient = int.Parse(reader_idIngredient["idIngredient"].ToString());
+                    command_idIngredient.Dispose();
+
+                    string requete_inset_list_ingre = "insert into tableprojet.Liste_ingredient(`idRecette1`,`idIngredient1`,`quantite`) Values("+ id_recette + "," + id_ingredient + "," + new_a1[0]+");";
+                    MySqlCommand command_insert_liste_ingre = maConnexion.CreateCommand();
+                    command_insert_liste_ingre.CommandText = requete_inset_list_ingre;
+                    MySqlDataReader reader_insert = command_insert_liste_ingre.ExecuteReader();
+                    MessageBox.Show(requete_inset_list_ingre);
+                    command_insert_liste_ingre.Dispose();
+
+                }
+
                 MessageBox.Show("Merci pour la creation de la recette");
                 Acceuil pa = new Acceuil();
                 pa.Show();
@@ -181,6 +201,18 @@ namespace projet_bdd
             Acceuil a = new Acceuil();
             a.Show();
             this.Close();
+        }
+
+        private void supr(object sender, RoutedEventArgs e)
+        {
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez selectionner un ingredient a supprimer");
+            }
+            else
+            {
+                listBox1.Items.Remove(listBox1.SelectedItem.ToString());
+            }
         }
     }
 }
