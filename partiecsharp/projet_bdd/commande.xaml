@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="Commande" Height="450" Width="800">
-    <Grid Background="#FFEEF9E8">
+    <Grid Background="#E4F1FE">
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
 
@@ -61,8 +61,8 @@
             </StackPanel>
 
         </StackPanel>
-        <Button Content="Ajouter au panier" Click="ajouter_commande" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" Width="200"/>
-        <Button Content="Retour" Click="retour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="78"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" />
+        <Button Content="Ajouter au panier" Click="ajouter_commande" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16" Width="200"/>
+        <Button Content="Retour" Click="retour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="78"  Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16" />
 
 
 

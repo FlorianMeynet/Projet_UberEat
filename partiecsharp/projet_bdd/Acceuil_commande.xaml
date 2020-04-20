@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Acceuil_commande" Height="450" Width="800">
 
-    <Grid Background="#FFEEF9E8">
+    <Grid Background="#E4F1FE">
         <Label Content="L'objet de votre venue ici" Margin="20" Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold"/>
-        <Button Content="Commander un plat" Margin="60" Click="commande" Height="91" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="350"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
-        <Button Content="Retour" Click="retour" Margin="50" Height="28"  VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="100"  Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button Content="Commander un plat" Margin="60" Click="commande" Height="91" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="350"  Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="30" BorderBrush="{x:Null}" />
+        <Button Content="Retour" Click="retour" Margin="50" Height="28"  VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="100"  Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}"/>
 
     </Grid>
 </Window>

@@ -7,21 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" SizeToContent="Manual">
 
-    <Grid Background="#FFEEF9E8">
-        
-        <Image HorizontalAlignment="Left" Height="382" Margin="484,0,0,0" VerticalAlignment="Center" Width="524" Source="C:\Users\meyne\OneDrive - De Vinci\ESILV\S2\Bases de données et interopérabilité\Projet\Projet_UberEat\partiecsharp\projet_bdd\cooking.jpg"/>
+    <Grid Background="#E4F1FE">
         <Label Content="Log In" HorizontalAlignment="Center" Height="75"  VerticalAlignment="Top" Width="168" FontSize="48" Background="{x:Null}" Foreground="Black" FontFamily="Roboto" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Center" Height="360"  VerticalAlignment="Center" Width="372">
-
-            <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5" />
+            <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#F7CA18" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5" />
             <TextBox x:Name="mail" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="30" BorderBrush="{x:Null}" Background="#FFE0D8D8" FontSize="18" Foreground="Black" SelectionTextBrush="#FF151414" />
             <TextBox x:Name="mdp" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="268" Height="30" BorderBrush="{x:Null}" FontSize="18" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
             <Button Content="Pas encore de compte ?" Click="notyet" HorizontalAlignment="Center" Height="19" Margin="0,309,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Segoe UI Black" Foreground="Black" Visibility="Visible" Opacity="0.5" BorderBrush="{x:Null}" />
             <Label Content="Mail :" HorizontalAlignment="Left" Margin="46,43,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" FontSize="16"/>
             <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="46,129,0,0" VerticalAlignment="Top" Height="30" Width="127" Foreground="Black" FontSize="16"/>
-
         </Grid>
-        <Button Content="Quitter" Click="leave" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
+        <Button Content="Quitter" Click="leave" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
     </Grid>
-
 </Window>

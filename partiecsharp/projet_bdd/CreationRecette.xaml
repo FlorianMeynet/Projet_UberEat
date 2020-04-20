@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="CreationRecette" Height="500" Width="900">
-    <Grid Background="#FFEEF9E8" >
+    <Grid Background="#E4F1FE" >
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" Margin="50,10">
                     <Label Content="Nom de la recette :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox Name="nomrecette" Margin="10"  Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B"/>
+                    <TextBox Name="nomrecette" Margin="10"  Background="#87AECC" SelectionTextBrush="#87AECC" BorderBrush="{x:Null}"/>
 
                     <Label Content="Descriptif :" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBox Name="descriptif" Margin="10" Background="#FFE0D8D8" SelectionTextBrush="#FF1D1B1B" Height="100" Width="200"/>
@@ -36,7 +36,7 @@
                         </ComboBox>
                         <TextBox Name="nombre" Margin="20" Width="30"/>
 
-                        <Button Content="Ajouter ingrédient" Click="ajout" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="12" Margin="10" BorderBrush="{x:Null}" Height="25"/>
+                        <Button Content="Ajouter ingrédient" Click="ajout" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="12" Margin="10" BorderBrush="{x:Null}" Height="25"/>
 
 
                     </StackPanel>
@@ -44,15 +44,15 @@
                         <Label HorizontalContentAlignment="Center" Content="Liste d'ingredients choisis :" Margin="10" HorizontalAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,0">
                             <ListBox Name="listBox1" HorizontalAlignment="Center"  Height="120" Width="200"  Background="#FFEEF9E8" FontSize="11"/>
-                            <Button Content="Supprimer un ingredient" VerticalContentAlignment="Center" Click="supr" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="11" Margin="10" Height="30" />
+                            <Button Content="Supprimer un ingredient" VerticalContentAlignment="Center" Click="supr" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="11" Margin="10" Height="30" />
 
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <Button Content="Retour" Width="100" Click="Retour" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
-                <Button Content="Valider" Width="100" Click="Validation" Background="#FF2EFF00" FontFamily="Segoe UI Black" FontSize="16"/>
+                <Button Content="Retour" Width="100" Click="Retour" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16"/>
+                <Button Content="Valider" Width="100" Click="Validation" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16"/>
             </StackPanel>
         </StackPanel>
     </Grid>
