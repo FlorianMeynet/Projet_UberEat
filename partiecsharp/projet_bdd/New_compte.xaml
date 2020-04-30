@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="New_compte" Height="450" Width="800">
+        Title="New_compte" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#E4F1FE" >
 

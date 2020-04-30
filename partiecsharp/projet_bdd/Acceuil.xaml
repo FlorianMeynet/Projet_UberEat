@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="Acceuil">
+        Title="Acceuil" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
     <Grid Background="#E4F1FE">
 
         <StackPanel  VerticalAlignment="Center" Height="444" HorizontalAlignment="Center">

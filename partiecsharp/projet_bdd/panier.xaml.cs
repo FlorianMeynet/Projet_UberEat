@@ -48,11 +48,14 @@ namespace projet_bdd
                     MySqlCommand command_recette = maConnexion.CreateCommand();
                     command_recette.CommandText = requete_recette;
                     MySqlDataReader reader_recette = command_recette.ExecuteReader();
-                    command_recette.Dispose();
-
+                    reader_recette.Read();
                     Recette.Items.Add(reader_recette.GetValue(0).ToString());
                     Prix.Items.Add(reader_recette.GetValue(1).ToString() + "₭");
-                    prix_tot.Text = (int.Parse(prix_tot.Text) + int.Parse(reader_recette.GetValue(1).ToString())).ToString();  //A verifier si ca marche
+                    MessageBox.Show(prix_tot.Text.ToString() + "  " + reader_recette.GetValue(1).ToString());
+                    int prix_t = int.Parse(prix_tot.Text.ToString()) + (int.Parse(reader_recette.GetValue(1).ToString()));
+                    prix_tot.Text = (string)(prix_t.ToString());  //A verifier si ca marche
+                    reader_recette.Close();
+                    command_recette.Dispose();
                 }
             }
         }

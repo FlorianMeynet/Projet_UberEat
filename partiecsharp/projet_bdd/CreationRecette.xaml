@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="CreationRecette" Height="500" Width="900">
+        Title="CreationRecette" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
     <Grid Background="#E4F1FE" >
              <Label Content="Création d'une nouvelle recette :" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">

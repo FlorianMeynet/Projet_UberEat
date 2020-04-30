@@ -10,11 +10,11 @@ namespace projet_bdd
         public static float Credit;
         public static List<int> listIdRecette = new List<int>();
 
-        static public void PanierVide(int i = 0, float c = 0, List<int> l = null)
+        static public void PanierVide(int i = 0, float c = 0)
         {
             Panier.idClient = i;
             Panier.Credit = c;
-            Panier.listIdRecette = l;
+            Panier.listIdRecette = new List<int>();
         }
     }
 }

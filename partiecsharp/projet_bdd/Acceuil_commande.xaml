@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="Acceuil_commande" Height="450" Width="800">
+        Title="Acceuil_commande" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#E4F1FE">
         <Label Content="L'objet de votre venue ici" Margin="20" Height="89" VerticalAlignment="Top" Width="582" FontSize="48" FontWeight="Bold"/>

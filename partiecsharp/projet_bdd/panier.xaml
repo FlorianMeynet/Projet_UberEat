@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="panier" Height="350" Width="700">
+        Title="panier" Height="720" Width="1080" >
     <Grid Background="#E4F1FE">
         <Label Content="Panier :" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -14,8 +14,8 @@
                 <ListBox Name="Prix"   Width="40" BorderBrush="{x:Null}"  Background="#E4F1FE"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Label Content="Total :" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" />
-                <TextBlock Name="prix_tot" Width="40"/>
+                <Label Content="Total :" FontWeight="Bold" FontSize="12" Margin="10" />
+                <TextBlock Name="prix_tot" VerticalAlignment="Center" Margin="10" >0</TextBlock>
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
