@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2020-04-17 10:43
+-- Generated: 2020-05-05 14:46
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -110,20 +110,13 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `TableProjet`.`Commande` (
   `idCommande` INT(11) NOT NULL AUTO_INCREMENT,
-  `idRecette` INT(11) NULL DEFAULT NULL,
   `idClient` INT(11) NULL DEFAULT NULL,
   `date_commande` DATETIME NULL DEFAULT NULL,
   `idCuisinier` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`idCommande`),
   UNIQUE INDEX `idCommande_UNIQUE` (`idCommande` ASC) VISIBLE,
-  INDEX `idRecette_idx` (`idRecette` ASC) VISIBLE,
   INDEX `idClient_idx` (`idClient` ASC) VISIBLE,
   INDEX `idCuisinier_idx` (`idCuisinier` ASC) VISIBLE,
-  CONSTRAINT `idRecette`
-    FOREIGN KEY (`idRecette`)
-    REFERENCES `TableProjet`.`Recette` (`idRecette`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `idClient`
     FOREIGN KEY (`idClient`)
     REFERENCES `TableProjet`.`Client` (`idClient`)
@@ -149,14 +142,12 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `TableProjet`.`Liste_ingredient` (
-  `idIngredient_recette` VARCHAR(20) NOT NULL,
-  `idRecette1` INT(11) NULL DEFAULT NULL,
-  `IdIngredient1` INT(11) NULL DEFAULT NULL,
+  `idRecette1` INT(11) NOT NULL,
+  `IdIngredient1` INT(11) NOT NULL,
   `quantite` FLOAT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`idIngredient_recette`),
   INDEX `idRecette_idx` (`idRecette1` ASC) VISIBLE,
   INDEX `idIngredient_idx` (`IdIngredient1` ASC) VISIBLE,
-  UNIQUE INDEX `idIngredient_recette_UNIQUE` (`idIngredient_recette` ASC) VISIBLE,
+  PRIMARY KEY (`idRecette1`, `IdIngredient1`),
   CONSTRAINT `idRecette1`
     FOREIGN KEY (`idRecette1`)
     REFERENCES `TableProjet`.`Recette` (`idRecette`)
@@ -170,10 +161,30 @@ CREATE TABLE IF NOT EXISTS `TableProjet`.`Liste_ingredient` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+CREATE TABLE IF NOT EXISTS `TableProjet`.`List_recette` (
+  `idRecette2` INT(11) NOT NULL,
+  `idCommande2` INT(11) NOT NULL,
+  `quantite` INT(11) NULL DEFAULT NULL,
+  INDEX `idCommande_idx` (`idCommande2` ASC) VISIBLE,
+  PRIMARY KEY (`idRecette2`, `idCommande2`),
+  CONSTRAINT `idRecette2`
+    FOREIGN KEY (`idRecette2`)
+    REFERENCES `TableProjet`.`Recette` (`idRecette`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idCommande2`
+    FOREIGN KEY (`idCommande2`)
+    REFERENCES `TableProjet`.`Commande` (`idCommande`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 
 
 

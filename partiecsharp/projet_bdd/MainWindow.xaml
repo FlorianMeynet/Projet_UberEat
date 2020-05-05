@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
         Title="MainWindow" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
-        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" SizeToContent="Manual">
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#E4F1FE">
         <Label Content="Log In" HorizontalAlignment="Center" Height="75"  VerticalAlignment="Top" Width="168" FontSize="48" Background="{x:Null}" Foreground="Black" FontFamily="Roboto" FontWeight="Bold"/>

@@ -57,8 +57,8 @@ namespace projet_bdd
             while (reader2.Read())
             {
                 plat.Items.Add(reader2["Nom"].ToString());   //Ajout des plats dans la comboBox
-
             }
+
             command2.Dispose();
             reader2.Close();
 
