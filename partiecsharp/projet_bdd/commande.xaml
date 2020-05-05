@@ -17,7 +17,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="5">
-                <Label Content="Credit :" HorizontalAlignment="Center"  FontWeight="Bold" />
+                <Label Content="Cooks :" HorizontalAlignment="Center"  FontWeight="Bold" />
                 <Label Name="Credit"  Margin="5" FontWeight="Bold"/>
                 <Button Content="Ajouter  des cooks" Click="ajout_cooks" FontFamily="Segoe UI Black" FontSize="10" Background="{x:Null}" BorderBrush="{x:Null}" Margin="5" />
 
