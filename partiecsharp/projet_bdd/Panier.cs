@@ -148,7 +148,21 @@ namespace projet_bdd
                 {
                     return false;
                 }
-                    string requete_entree = "UPDATE `tableprojet`.`client` SET ` `capitalCooks` ='" + (ClientStatic.capitalCooks - prixTotal) + "' WHERE (`idClient` = '" + ClientStatic.idClient + "');";
+                int w = 0;
+                string requete_entreeX = "SELECT count(*) from tableprojet.Cuisinier";
+                MySqlCommand command1X = maConnexion.CreateCommand();
+                command1X.CommandText = requete_entreeX;
+                MySqlDataReader reader1X = command1X.ExecuteReader();
+                while (reader1X.Read())
+                {
+                    Random val = new Random();
+                    w = val.Next(0, int.Parse(reader1X.GetValue(0).ToString()));
+                }
+
+                command1X.Dispose();
+                reader1X.Close();
+
+                string requete_entree = "INSERT INTO `tableprojet`.`commande` (`idClient`, `date_commande`, `idCuisinier`) VALUES ('"+ClientStatic.idClient+"', '"+DateTime.Now.ToString()+"', '"+w+"');";
                     MySqlCommand command1 = maConnexion.CreateCommand();
                     command1.CommandText = requete_entree;
                     MySqlDataReader reader1 = command1.ExecuteReader();
@@ -161,9 +175,63 @@ namespace projet_bdd
                     reader1.Close();
 
                     maConnexion.Close();
-                    return true;
-                
+
+                int idcommande = 0;
+                string requete_entreeW = "SELECT count(*) from tableprojet.Cuisinier";
+                MySqlCommand command1W = maConnexion.CreateCommand();
+                command1W.CommandText = requete_entreeW;
+                MySqlDataReader reader1W = command1W.ExecuteReader();
+                while (reader1W.Read())
+                {
+                    idcommande = int.Parse(reader1W.GetValue(0).ToString());
+                }
+
+                command1W.Dispose();
+                reader1W.Close();
+                List<(int, int)> listeparcequeflorianestlourd = new List<(int, int)>();
+                foreach ( int x in Panier.listIdRecette)
+                {
+                    bool existe = false;
+                    for (int po=0;po<listeparcequeflorianestlourd.Count;po++)
+                    {
+                        
+                        if (listeparcequeflorianestlourd[po].Item1==x)
+                        {
+                            int a = listeparcequeflorianestlourd[po].Item2;
+                            int id = listeparcequeflorianestlourd[po].Item1;
+                            listeparcequeflorianestlourd.Remove((id, a));
+                            listeparcequeflorianestlourd.Add((id, a + 1));
+                            existe = true;
+                        }
+                        
+                    }
+                    if (!existe)
+                    {
+                        listeparcequeflorianestlourd.Add((x, 1));
+                    }
+                }
+
+                foreach ((int,int) valuedezfqe in listeparcequeflorianestlourd)
+                {
+                    string requete_entreeZ = "INSERT INTO `tableprojet`.`list_recette` (`idRecette2`, `idCommande2`, `quantite`) VALUES('"+ valuedezfqe.Item1+ "', '"+idcommande+"', '"+ valuedezfqe.Item2+ "');";
+
+                    MySqlCommand command1Z = maConnexion.CreateCommand();
+                    command1Z.CommandText = requete_entreeZ;
+                    MySqlDataReader reader1Z = command1Z.ExecuteReader();
+                    while (reader1Z.Read())
+                    {
+                    }
+
+                    command1Z.Dispose();
+                    reader1Z.Close();
+                }
+
+
+           
+
+
             }
+            else { return false; }
         }
 
         static public void FaitTravailStock()

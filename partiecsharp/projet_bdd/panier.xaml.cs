@@ -69,11 +69,12 @@ namespace projet_bdd
 
         private void valider_panier(object sender, RoutedEventArgs e)
         {
-            if (Panier.FaitTravailCommande())
+            if (Panier.FaitTravailCommande(int.Parse(prix_tot.Text)))
             {
                 MessageBox.Show("Merci pour votre achat, vous serez livré dans les plus brefs délais");
 
             }
+            Panier.PanierVide();
         }
     }
 }
