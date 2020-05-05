@@ -169,9 +169,18 @@ namespace projet_bdd
                 Panier.listIdRecette.Add(id_r);
             }
             MessageBox.Show(Panier.listIdRecette.ToString());
-            Commande new_win = new Commande();
-            this.Close();
-            new_win.Show();
+            if (Panier.EstCreable())
+            {
+                Commande new_win = new Commande();
+                this.Close();
+                new_win.Show();
+            }
+            else
+            {
+                Panier.listIdRecette.Remove(id_r);
+                MessageBox.Show("Pas assez de quantité");
+            }
+            
         }
         private bool Estenstock(string nom_plat)
         {
