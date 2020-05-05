@@ -66,7 +66,7 @@ namespace projet_bdd
                 string adr = adresse.Text;
                 string v = ville.Text;
                 DateTime? d = date.SelectedDate;
-                string date_nai = d.Value.Year.ToString() +"-" + d.Value.Day.ToString() + "-" + d.Value.Month.ToString(); //Gerer le faite que c'est year-day-month 
+                string date_nai = d.Value.Year.ToString() +"-" + d.Value.Month.ToString() + "-" + d.Value.Day.ToString(); //Gerer le faite que c'est year-day-month 
                 
                 MessageBox.Show(date_nai);
                 string t = tel.Text;
@@ -81,7 +81,7 @@ namespace projet_bdd
                 string p = email.Text;
                 string m = mdp.Text;
 
-                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values ('" + name + "','" + pre + "','" + adr + "','" + v + "'," + date_nai + "," + t + ",'" + p + "'," + estcreateur1.ToString() + "," + "0" + ",'" + m+"');";
+                string insertTable = " insert into tableprojet.client (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) Values ('" + name + "','" + pre + "','" + adr + "','" + v + "','" + date_nai + "'," + t + ",'" + p + "'," + estcreateur1.ToString() + "," + "0" + ",'" + m+"');";
                 MySqlCommand command3 = maConnexion.CreateCommand();
                 command3.CommandText = insertTable;
                 MessageBox.Show(insertTable);

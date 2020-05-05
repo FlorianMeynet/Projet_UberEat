@@ -167,7 +167,7 @@ namespace projet_bdd
             string requete_remplacement_quantite = "UPDATE `stock` SET `quantite`=" + cequi_reste + " WHERE idIngredient=" + ingre.ToString() + ";";  //Remplacer la quantite par la nouvelle 
             MySqlCommand command_remplacement = maConnexion.CreateCommand();
             command_remplacement.CommandText = requete_remplacement_quantite;
-            MySqlDataReader reader_remplacement = command_remplacement.ExecuteReader();  //Je sais pas si y a besoin ??
+            MySqlDataReader reader_remplacement = command_remplacement.ExecuteReader();
             command_remplacement.Dispose();
         }
     }

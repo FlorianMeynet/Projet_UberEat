@@ -26,7 +26,7 @@ namespace projet_bdd
             InitializeComponent();
             ClientStatic.ClientStatic1();
             Panier.PanierVide();
-            mot_de_passe.mot_de_passe_changement("cacaprout666");
+            mot_de_passe.mot_de_passe_changement("4F10e6bff@");
         }
 
         private void conexion(object sender, RoutedEventArgs e)
