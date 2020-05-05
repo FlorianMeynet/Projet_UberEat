@@ -12,14 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\asus\Desktop\Projet_github\Projet_UberEat\partiecsharp\projet_bdd\App.xaml
 12-1358180949
 
-<<<<<<< HEAD
-19-571420447
-2061048920858
-=======
 19-462476961
 207-1480051312
->>>>>>> f822f77dd488a0d99422e3723d431cf1bc0d827b
 Acceuil.xaml;Acceuil_commande.xaml;commande.xaml;CreationRecette.xaml;Creation_ok.xaml;erreur.xaml;erreur_connexion.xaml;erreur_mail.xaml;MainWindow.xaml;New_compte.xaml;paiement.xaml;panier.xaml;
 
-True
+False
 
