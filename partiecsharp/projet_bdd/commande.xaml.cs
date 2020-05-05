@@ -209,5 +209,12 @@ namespace projet_bdd
             
             
         }
+
+        private void ajout_cooks(object sender, RoutedEventArgs e)
+        {
+            paiement a = new paiement();
+            a.Show();
+            this.Close();
+        }
     }
 }

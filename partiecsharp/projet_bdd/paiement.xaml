@@ -7,7 +7,40 @@
         mc:Ignorable="d"
         Title="paiement" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
         WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
-    <Grid Background="#E4F1FE">
+
+    <Grid Background="#E4F1FE" >
+
+        <StackPanel  HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top">
+            <Label Content="Ajouter des cooks à votre compte :" Height="42" Width="350" Foreground="Black" FontSize="20"/>
+
+            <TextBlock Name="tauxdechange" Text="Taux de change : "></TextBlock>
+        </StackPanel>
+        <Button Content="Retour" Click="retour" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.5,0.5" Background="#F7CA18" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="{x:Null}" />
         
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <TextBlock Text="Quantité : "></TextBlock>
+                <TextBox Name="quantitesouhaite" Text="X" TextChanged="quantitesouhaite_TextChanged"></TextBox>
+                <TextBlock Text=" Cooks"></TextBlock>
+
+
+            </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <TextBlock Text="Quantité : "></TextBlock>
+            <TextBox Name="quantiteapayer" Text="Y" TextChanged="quantiteapayer_TextChanged"></TextBox>
+            <TextBlock Text=" Euros"></TextBlock>
+
+
+        </StackPanel>
+            <Button Content="Echanger" Click="Changer" HorizontalAlignment="Right" Height="52" Margin="10" VerticalAlignment="Bottom" Width="230" RenderTransformOrigin="0.5,0.5" Background="#F7CA18" FontFamily="Segoe UI Black" Grid.Row="1" />
+
+        </StackPanel>
+
     </Grid>
+
 </Window>
+
+
