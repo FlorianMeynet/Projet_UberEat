@@ -27,7 +27,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD="+mot_de_passe.mot_dp+";";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -126,12 +126,12 @@ namespace projet_bdd
                 pb.Show();
                 return;
             }
-
+            
 
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=" + mot_de_passe.mot_dp + ";";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -181,7 +181,7 @@ namespace projet_bdd
             MySqlConnection maConnexion = null;
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=4F10e6bff@;";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=" + mot_de_passe.mot_dp + "; ";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
