@@ -9,6 +9,7 @@
         WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#E4F1FE">
+        <Button Content="Classement" Click="AllerPageTop" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5" Width="100" Background="#F7CA18" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5"> </Button>
         <Label Content="Log In" HorizontalAlignment="Center" Height="75"  VerticalAlignment="Top" Width="168" FontSize="48" Background="{x:Null}" Foreground="Black" FontFamily="Roboto" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Center" Height="360"  VerticalAlignment="Center" Width="372">
             <Button Content="Connexion" Click="conexion" HorizontalAlignment="Center" Height="52" Margin="0,252,0,0" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.5,0.5" Background="#F7CA18" FontFamily="Segoe UI Black" BorderBrush="#FFC7B5B5" />

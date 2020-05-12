@@ -1,0 +1,88 @@
+﻿<Window x:Class="projet_bdd.PageTop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projet_bdd"
+        mc:Ignorable="d"
+        Title="PageTop" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Margin="20">
+        <TextBlock Text="Top3 Client" HorizontalAlignment="Center" FontSize="50" FontWeight="Black"></TextBlock>
+        <Grid >
+
+            <StackPanel HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomclient1" Margin="5,5,5,0">Petit mario</TextBlock>
+                <TextBlock Name="nombreCOMMANDE1" Height="30" Background="#ffffffff" Foreground="#F5AB35" Width="250" Margin="5" Text="Ce client a commandé"></TextBlock>
+
+                </StackPanel>
+
+        </Grid>
+
+        <Grid Margin="2" >
+
+            <StackPanel  HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomclient2" Margin="5,5,5,0">Petit mario</TextBlock>
+                <TextBlock Name="nombreCOMMANDE2" Height="30" Background="#ffffffff" Foreground="#F5AB35" Width="250" Margin="5" Text="Ce client a commandé "></TextBlock>
+
+                </StackPanel>
+
+        </Grid>
+
+        <Grid Margin="2" >
+
+            <StackPanel  HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomclient3" Margin="5,5,5,0">Petit mario</TextBlock>
+                <TextBlock Name="nombreCOMMANDE3" Height="30" Background="#ffffffff" Foreground="#F5AB35" Width="250" Margin="5" Text="Ce client a commandé "></TextBlock>
+
+                </StackPanel>
+
+        </Grid>
+        </StackPanel>
+        <StackPanel Margin="20">
+        <TextBlock Text="Top3 Plat" HorizontalAlignment="Center" FontSize="50" FontWeight="Black"></TextBlock>
+        <Grid >
+
+            <StackPanel HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomplat1" Margin="5,5,5,0">Petit mario</TextBlock>
+
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Margin="2" >
+
+            <StackPanel  HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomplat2" Margin="5,5,5,0">Petit mario</TextBlock>
+
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Margin="2" >
+
+            <StackPanel  HorizontalAlignment="Center" >
+
+                <TextBlock Foreground="#F5AB35" FontWeight="Black" Name="nomplat3" Margin="5,5,5,0">Petit mario</TextBlock>
+
+
+            </StackPanel>
+
+        </Grid>
+        </StackPanel>
+            
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="Notre cuisinier phare" HorizontalAlignment="Center" FontSize="50" FontWeight="Black"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Name="cuisinierphare" Text="Notre cuisinier phrare est "  Foreground="#F5AB35" FontWeight="Black"></TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Window>

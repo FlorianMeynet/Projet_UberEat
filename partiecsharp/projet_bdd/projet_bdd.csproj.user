@@ -34,6 +34,9 @@
     <Compile Update="New_compte.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PageTop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="paiement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="New_compte.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageTop.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="paiement.xaml">

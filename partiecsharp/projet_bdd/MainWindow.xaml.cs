@@ -141,5 +141,12 @@ namespace projet_bdd
         {
             this.Close();
         }
+
+        private void AllerPageTop(object sender, RoutedEventArgs e)
+        {
+            PageTop a = new PageTop();
+            a.Show();
+            this.Close();
+        }
     }
 }

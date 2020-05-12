@@ -242,6 +242,7 @@ namespace projet_bdd
 
             }
             else { return false; }
+            return false;
         }
 
         static public void FaitTravailStock()
