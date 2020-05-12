@@ -139,7 +139,7 @@ namespace projet_bdd
             {
                 Console.WriteLine(" ErreurConnexion : " + er.ToString());
             }
-            MessageBox.Show(choix);
+            //MessageBox.Show(choix);
             string requete_list_ingre = "Select r.idRecette,l.idIngredient1,l.quantite from Liste_ingredient l join recette r on l.idRecette1=r.idRecette  where r.Nom='" + choix + "';";
             MySqlCommand command_list = maConnexion.CreateCommand();
             command_list.CommandText = requete_list_ingre;
@@ -168,7 +168,7 @@ namespace projet_bdd
             {
                 Panier.listIdRecette.Add(id_r);
             }
-            MessageBox.Show(Panier.listIdRecette.ToString());
+            //MessageBox.Show(Panier.listIdRecette.ToString());
             if (Panier.EstCreable())
             {
                 Commande new_win = new Commande();

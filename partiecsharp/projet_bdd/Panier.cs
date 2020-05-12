@@ -116,13 +116,11 @@ namespace projet_bdd
             }
             else
             {
-                string requete_entree = "UPDATE `tableprojet`.`client` SET ` `capitalCooks` ='"+ (ClientStatic.capitalCooks - prixTotal) + "' WHERE (`idClient` = '"+ClientStatic.idClient+"');";
+                string requete_entree = "UPDATE `tableprojet`.`client` SET `capitalCooks` ="+ (ClientStatic.capitalCooks - prixTotal) + " WHERE (`idClient` = "+ClientStatic.idClient+");";
                 MySqlCommand command1 = maConnexion.CreateCommand();
                 command1.CommandText = requete_entree;
                 MySqlDataReader reader1 = command1.ExecuteReader();
-                while (reader1.Read())
-                {
-                }
+                
                 MessageBox.Show("Merci pour ta commande");
                 ClientStatic.capitalCooks = ClientStatic.capitalCooks - prixTotal;
                 command1.Dispose();
@@ -156,13 +154,13 @@ namespace projet_bdd
                 while (reader1X.Read())
                 {
                     Random val = new Random();
-                    w = val.Next(0, int.Parse(reader1X.GetValue(0).ToString()));
+                    w = val.Next(1, int.Parse(reader1X.GetValue(0).ToString()));
                 }
 
                 command1X.Dispose();
                 reader1X.Close();
-
-                string requete_entree = "INSERT INTO `tableprojet`.`commande` (`idClient`, `date_commande`, `idCuisinier`) VALUES ('"+ClientStatic.idClient+"', '"+DateTime.Now.ToString()+"', '"+w+"');";
+                string date_now = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+                string requete_entree = "INSERT INTO `tableprojet`.`commande` (`idClient`, `date_commande`, `idCuisinier`) VALUES ("+ClientStatic.idClient+", '"+ date_now + "', "+w+");";
 				MySqlCommand command1 = maConnexion.CreateCommand();
 				command1.CommandText = requete_entree;
 				MySqlDataReader reader1 = command1.ExecuteReader();
@@ -239,7 +237,7 @@ namespace projet_bdd
                 
 				command1B.Dispose();
                 reader1B.Close();
-
+                return (true);
             }
             else { return false; }
         }
