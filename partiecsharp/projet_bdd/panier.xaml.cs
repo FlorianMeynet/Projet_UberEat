@@ -52,7 +52,7 @@ namespace projet_bdd
                     reader_recette.Read();
                     Recette.Items.Add(reader_recette.GetValue(0).ToString());
                     Prix.Items.Add(reader_recette.GetValue(1).ToString() + "₭");
-                    MessageBox.Show(prix_tot.Text.ToString() + "  " + reader_recette.GetValue(1).ToString());
+                    //MessageBox.Show(prix_tot.Text.ToString() + "  " + reader_recette.GetValue(1).ToString());
                     int prix_t = int.Parse(prix_tot.Text.ToString()) + (int.Parse(reader_recette.GetValue(1).ToString()));
                     prix_tot.Text = prix_t.ToString();
                     reader_recette.Close();
