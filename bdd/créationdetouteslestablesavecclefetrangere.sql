@@ -243,10 +243,10 @@ INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`q
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (15,1,20,6,6);
 INSERT INTO `tableprojet`.`stock` (`idingredient`,`quantiteMin`,`quantiteMax`,`quantite`,`idfournisseur`) VALUES (16,1,20,6,7);
 
-/*
-INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Sandwich poulet','Super bon sandwich avec poulet',3.25,'Poulet:0.075-gr/Salade:0.010-kg/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',2);
-INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Poivron-sandwich','Un poivron et un sandwich',4,'Poivron:1-u/Pain:1-u',3);
-INSERT INTO `tableprojet`.`recette` (`Nom`,`descriptif`,`prix`,`listingredient`,`idCreateur`) VALUES ('Carbonate Flammande','Plat typique belge',5.5,'Poulet:0.075-kg/Salade:0.010-kg/Pain:1-u/Mayonaise:2-gr/Huile:0.02-l',1);
-*/
+
+INSERT INTO `tableprojet`.`cuisinier` ( `Nom`, `Prenom`, `Salaire`, `nombre_commande`) VALUES ('jean', 'Yves', '10', '0');
+INSERT INTO `tableprojet`.`cuisinier` (`Nom`, `Prenom`, `Salaire`, `nombre_commande`) VALUES ('licie', 'Mcdo', '100', '0');
+INSERT INTO `tableprojet`.`cuisinier` (`Nom`, `Prenom`, `Salaire`, `nombre_commande`) VALUES ('oic', 'movais', '210', '0');
+INSERT INTO `tableprojet`.`cuisinier` (`Nom`, `Prenom`, `Salaire`, `nombre_commande`) VALUES ('Fun', 'Louis', '5410', '0');
 
 
