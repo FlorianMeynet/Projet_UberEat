@@ -207,7 +207,7 @@ namespace projet_bdd
             float stock = float.Parse(reader_stock.GetValue(0).ToString());
             reader_stock.Close();
             command_stock.Dispose();
-            MessageBox.Show(stock.ToString()+"   "+ingre[1]+" "+ingre[0]);
+            //MessageBox.Show(stock.ToString()+"   "+ingre[1]+" "+ingre[0]);
             if (stock < float.Parse(ingre[1]))
             {
                 return (false);  //Manque ingredient

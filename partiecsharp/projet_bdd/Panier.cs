@@ -170,16 +170,15 @@ namespace projet_bdd
 				command1.Dispose();
 				reader1.Close();
 
-				maConnexion.Close();
-
                 int idcommande = 0;
-                string requete_entreeW = "SELECT count(*) from tableprojet.Cuisinier";
+                string requete_entreeW = "SELECT count(*) from tableprojet.Commande";
                 MySqlCommand command1W = maConnexion.CreateCommand();
                 command1W.CommandText = requete_entreeW;
                 MySqlDataReader reader1W = command1W.ExecuteReader();
                 while (reader1W.Read())
                 {
                     idcommande = int.Parse(reader1W.GetValue(0).ToString());
+                    
                 }
 
                 command1W.Dispose();
@@ -209,15 +208,17 @@ namespace projet_bdd
 
                 foreach ((int,int) valuedezfqe in listeparcequeflorianestlourd)
                 {
-                    string requete_entreeZ = "INSERT INTO `tableprojet`.`list_recette` (`idRecette2`, `idCommande2`, `quantite`) VALUES('"+ valuedezfqe.Item1+ "', '"+idcommande+"', '"+ valuedezfqe.Item2+ "');";
+                    string requete_entreeZ = "INSERT INTO `tableprojet`.`list_recette` (`idRecette2`, `idCommande2`, `quantite`) VALUES('"+ valuedezfqe.Item1+ "', '"+(idcommande)+"', '"+ valuedezfqe.Item2+ "');";
                     MySqlCommand command1Z = maConnexion.CreateCommand();
                     command1Z.CommandText = requete_entreeZ;
                     MySqlDataReader reader1Z = command1Z.ExecuteReader();
+                    reader1Z.Read();
                     command1Z.Dispose();
                     reader1Z.Close();
                 }
-				
-				int nombrecommande = 0;
+
+
+                int nombrecommande = 0;
                 string requete_entreeA = "SELECT nombre_commande from tableprojet.Cuisinier where idCuisinier="+w+";";
                 MySqlCommand command1A = maConnexion.CreateCommand();
                 command1A.CommandText = requete_entreeA;
@@ -230,7 +231,7 @@ namespace projet_bdd
                 command1A.Dispose();
                 reader1A.Close();
 				
-				string requete_entreeB = "UPDATE `tableprojet`.`Cuisinier` SET ` `nombre_commande` ='"+(nombrecommande+1).ToString()+ "' WHERE (`idCuisinier` = '"+w+"');";
+				string requete_entreeB = "UPDATE `tableprojet`.`Cuisinier` SET `nombre_commande` ='"+(nombrecommande+1).ToString()+ "' WHERE (`idCuisinier` = '"+w+"');";
                 MySqlCommand command1B = maConnexion.CreateCommand();
                 command1B.CommandText = requete_entreeB;
                 MySqlDataReader reader1B = command1B.ExecuteReader();

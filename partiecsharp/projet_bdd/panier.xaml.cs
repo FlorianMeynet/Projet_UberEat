@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -72,7 +72,7 @@ namespace projet_bdd
             if (Panier.FaitTravailCommande(int.Parse(prix_tot.Text)))
             {
                 MessageBox.Show("Merci pour votre achat, vous serez livré dans les plus brefs délais");
-
+                this.Close();
             }
             Panier.PanierVide();
         }

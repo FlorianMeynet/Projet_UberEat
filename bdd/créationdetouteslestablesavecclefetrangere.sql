@@ -4,7 +4,7 @@
 -- Version: 1.0
 -- Project: Name of the project
 -- Author: asus
-
+drop database tableprojet;
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -14,7 +14,7 @@ CREATE SCHEMA IF NOT EXISTS `TableProjet` DEFAULT CHARACTER SET utf8 ;
 CREATE TABLE IF NOT EXISTS `TableProjet`.`Createur` (
   `idCreateur` INT(11) NOT NULL AUTO_INCREMENT,
   `Nom` VARCHAR(45) NULL DEFAULT '\"Chef Jason\"',
-  `idClient` INT(11) NOT NULL,
+  `idClient` INT(11) NOT NULL, 
   PRIMARY KEY (`idCreateur`),
   UNIQUE INDEX `idCreateur_UNIQUE` (`idCreateur` ASC) VISIBLE,
   INDEX `fk_Createur_Client1_idx` (`idClient` ASC) VISIBLE,
@@ -193,6 +193,7 @@ INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naiss
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Morin','Loic','rue du tarpin','marseille','1999-04-18',0685314692,'morin.loic@gmail.fr',0,10000,'caca');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Meynet','Florian','rue de la boulangerie','perrognier','1998-02-17',067458365,'meynet.florian@orange.fr',0,10000,'mdpfacile');
 INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Admin','Admin','ESILV','PARIS','1800-01-10',0000,'admin',1,1000000,'admin');
+INSERT INTO `tableprojet`.`client` (`nom`,`prenom`,`adresse`,`ville`,`date_naissance`,`numeroDeTelephone`,`adresseEmail`,`estCreateur`,`capitalCooks`,`motDePasse`) VALUES ('Client','Client','ESILV','PARIS','1800-01-10',100,'client',0,1000000,'client');
 
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de marseille',2);
 INSERT INTO `tableprojet`.`createur` (`Nom`,`idClient`) VALUES ('Le cuisto de haute savoie',3);
