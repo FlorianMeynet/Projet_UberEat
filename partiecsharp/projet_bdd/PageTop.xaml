@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projet_bdd"
         mc:Ignorable="d"
-        Title="PageTop" Height="450" Width="800">
-    <StackPanel>
+        Title="PageTop" AllowsTransparency="True" Height="720" Width="1080" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+    <StackPanel Background="#E4F1FE">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <StackPanel Margin="20">
         <TextBlock Text="Top3 Client" HorizontalAlignment="Center" FontSize="50" FontWeight="Black"></TextBlock>

@@ -41,7 +41,7 @@ namespace projet_bdd
                 Recette.Items.Add("Panier vide");
             }
             else
-            {
+            { 
 
                 foreach (int id in liste)
                 {

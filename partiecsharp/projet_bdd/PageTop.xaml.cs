@@ -26,7 +26,7 @@ namespace projet_bdd
 
             try
             {
-                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=peertoprint;UID=root;PASSWORD=" + mot_de_passe.mot_dp + ";";
+                string connexionString = "SERVER=localhost;PORT=3306;DATABASE=tableprojet;UID=root;PASSWORD=" + mot_de_passe.mot_dp + ";";
                 maConnexion = new MySqlConnection(connexionString);
                 maConnexion.Open();
             }
@@ -67,7 +67,7 @@ namespace projet_bdd
             reader.Close();
             command1.Dispose();
 
-            string requete_affichagepseudoX = "SELECT r.Nom,count(lister.idRecette2) from List_recette as lister JOIN Recette as r ON r.idRecette=lister.idRecette2 ORDER BY count(listr.idRecette2) DESC;";
+            string requete_affichagepseudoX = "SELECT r.Nom,count(lister.idRecette2) from List_recette as lister JOIN Recette as r ON r.idRecette=lister.idRecette2 ORDER BY count(lister.idRecette2) DESC;";
             MySqlCommand command1X = maConnexion.CreateCommand();
             command1X.CommandText = requete_affichagepseudoX;
             MySqlDataReader readerX = command1X.ExecuteReader();
@@ -99,16 +99,16 @@ namespace projet_bdd
             readerX.Close();
             command1X.Dispose();
 
-            string requete_affichagepseudoY = "SELECT cui.Nom,count(lister.idCommande) from Cuisinier as cui JOIN Commande as lister ON cui.idCuisinier=lister.idCuisinier ORDER BY count(listr.idCommande) DESC;";
+            string requete_affichagepseudoY = "SELECT cui.Nom,count(lister.idCommande) from Cuisinier as cui JOIN Commande as lister ON cui.idCuisinier=lister.idCuisinier ORDER BY count(lister.idCommande) DESC;";
             MySqlCommand command1Y = maConnexion.CreateCommand();
             command1Y.CommandText = requete_affichagepseudoY;
-            MySqlDataReader readerY = command1X.ExecuteReader();
+            MySqlDataReader readerY = command1Y.ExecuteReader();
             int iy = 0;
             while (readerY.Read())
             {
                 if (iy == 0)
                 {
-                    cuisinierphare.Text += readerX.GetValue(0).ToString() +", créateur de "+ readerY.GetValue(1).ToString()+" recettes";
+                    cuisinierphare.Text += readerY.GetValue(0).ToString() +", créateur de "+ readerY.GetValue(1).ToString()+" recettes";
 
 
                 }
